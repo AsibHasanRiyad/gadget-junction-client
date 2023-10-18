@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Sam from "./Sam";
 
 // Import Swiper React components
@@ -43,21 +43,21 @@ const Samsung = () => {
         >
           <SwiperSlide>
             <img
-              className=" rounded h-full md:h-[80vh] w-full "
+              className=" rounded h-full  max-h-[400px] w-screen "
               src="https://i.ibb.co/XsJGrX3/Screenshot-2023-10-18-at-4-10-53-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full md:h-[80vh] w-full"
+              className=" rounded h-full  max-h-[400px] w-screen"
               src="https://i.ibb.co/7kW5D26/Screenshot-2023-10-18-at-4-11-43-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full md:h-[80vh] w-full"
+              className=" rounded h-full  max-h-[400px] w-screen"
               src="https://i.ibb.co/4RxRckj/Screenshot-2023-10-18-at-4-17-46-PM.png"
               alt=""
             />

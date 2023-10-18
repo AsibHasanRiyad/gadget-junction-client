@@ -26,9 +26,9 @@ const Xiaomi = () => {
   const xiaomi = products.filter((product) => product.brandName === "Xiaomi");
   console.log(xiaomi);
   return (
-    <div>
+    <div className=" mt-4 mb-10">
       {/* slider */}
-      <div className=" mx-4 ">
+      <div className=" mx-4 lg:mx-20">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -45,22 +45,22 @@ const Xiaomi = () => {
         >
           <SwiperSlide>
             <img
-              className=" rounded h-full md:h-[80vh] w-full "
-              src="https://i.ibb.co/CB8RSkm/Screenshot-2023-10-18-at-3-55-52-PM.png"
+              className=" rounded h-full  max-h-[500px] w-screen "
+              src="https://i.ibb.co/8Xx0RbK/Screenshot-2023-10-18-at-5-52-35-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full md:h-[80vh] w-full"
-              src="https://i.ibb.co/X57pRxr/Screenshot-2023-10-18-at-3-57-11-PM.png"
+              className=" rounded h-full  max-h-[500px] w-screen"
+              src="https://i.ibb.co/LxwHBXs/Screenshot-2023-10-18-at-5-55-04-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full md:h-[80vh] w-full"
-              src="https://i.ibb.co/QKpKxpJ/Screenshot-2023-10-18-at-4-27-11-PM.png"
+              className=" rounded h-full  max-h-[500px] w-screen"
+              src="https://i.ibb.co/T4t3312/Screenshot-2023-10-18-at-5-52-15-PM.png"
               alt=""
             />
           </SwiperSlide>

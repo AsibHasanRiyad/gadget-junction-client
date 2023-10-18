@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import One from './One';
 
 // Import Swiper React components
@@ -28,7 +28,7 @@ const OnePlus = () => {
     return (
         <div className=' mb-10 mt-4'>
              {/* slider */}
-      <div className=" mx-4 ">
+      <div className=" mx-4 lg:mx-20">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -45,22 +45,22 @@ const OnePlus = () => {
       >
         <SwiperSlide>
           <img
-            className=" rounded h-full md:h-[80vh] w-full "
-            src="https://i.ibb.co/CB8RSkm/Screenshot-2023-10-18-at-3-55-52-PM.png"
+            className=" rounded  h-full max-h-[600px] w-full "
+            src="https://i.ibb.co/mzVTNGy/Screenshot-2023-10-18-at-4-38-42-PM.png"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=" rounded h-full md:h-[80vh] w-full"
-            src="https://i.ibb.co/X57pRxr/Screenshot-2023-10-18-at-3-57-11-PM.png"
+            className=" rounded  h-full max-h-[600px]  w-full"
+            src="https://i.ibb.co/RDBbs0Q/Screenshot-2023-10-18-at-4-39-04-PM.png"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=" rounded h-full md:h-[80vh] w-full"
-            src="https://i.ibb.co/QKpKxpJ/Screenshot-2023-10-18-at-4-27-11-PM.png"
+            className=" rounded  h-full max-h-[600px]   w-full"
+            src="https://i.ibb.co/CB14T25/Screenshot-2023-10-18-at-4-40-36-PM.png"
             alt=""
           />
         </SwiperSlide>

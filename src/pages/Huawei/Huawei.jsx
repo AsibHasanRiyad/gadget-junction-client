@@ -44,22 +44,22 @@ const Huawei = () => {
         >
           <SwiperSlide>
             <img
-              className=" rounded h-full md:h-[80vh] w-full "
-              src="https://i.ibb.co/CB8RSkm/Screenshot-2023-10-18-at-3-55-52-PM.png"
+              className=" rounded h-full  max-h-[600px] w-screen "
+              src="https://i.ibb.co/rM3ZmPp/Screenshot-2023-10-18-at-5-59-06-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full md:h-[80vh] w-full"
-              src="https://i.ibb.co/X57pRxr/Screenshot-2023-10-18-at-3-57-11-PM.png"
+              className=" rounded h-full  max-h-[600px] w-screen"
+              src="https://i.ibb.co/chf0HXM/Screenshot-2023-10-18-at-5-57-37-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full md:h-[80vh] w-full"
-              src="https://i.ibb.co/QKpKxpJ/Screenshot-2023-10-18-at-4-27-11-PM.png"
+              className=" rounded h-full  max-h-[600px] w-screen"
+              src="https://i.ibb.co/tbySt29/Screenshot-2023-10-18-at-5-58-51-PM.png"
               alt=""
             />
           </SwiperSlide>

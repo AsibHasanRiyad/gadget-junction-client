@@ -28,7 +28,7 @@ const Apples = () => {
   return (
     <div className=" mb-10 mt-4">
       {/* slider */}
-      <div className=" mx-4 ">
+      <div className=" mx-4 lg:mx-20 ">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}

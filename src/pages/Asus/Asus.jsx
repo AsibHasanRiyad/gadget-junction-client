@@ -27,7 +27,7 @@ const Asus = () => {
   return (
     <div className=" mt-4 mb-10">
       {/* slider */}
-      <div className=" mx-4 ">
+      <div className=" mx-4 lg:mx-20">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -44,22 +44,22 @@ const Asus = () => {
         >
           <SwiperSlide>
             <img
-              className=" rounded h-full md:h-[80vh] w-full "
-              src="https://i.ibb.co/CB8RSkm/Screenshot-2023-10-18-at-3-55-52-PM.png"
+              className=" rounded h-full  max-h-[500px] w-screen "
+              src="https://i.ibb.co/hK2CwMF/Screenshot-2023-10-18-at-6-04-29-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full md:h-[80vh] w-full"
-              src="https://i.ibb.co/X57pRxr/Screenshot-2023-10-18-at-3-57-11-PM.png"
+              className=" rounded h-full  max-h-[500px] w-screen"
+              src="https://i.ibb.co/vLVmBVD/Screenshot-2023-10-18-at-6-04-07-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full md:h-[80vh] w-full"
-              src="https://i.ibb.co/0JwgXKM/Screenshot-2023-10-18-at-4-03-00-PM.png"
+              className=" rounded h-full  max-h-[500px] w-screen"
+              src="https://i.ibb.co/t3g04k8/Screenshot-2023-10-18-at-6-03-39-PM.png"
               alt=""
             />
           </SwiperSlide>
