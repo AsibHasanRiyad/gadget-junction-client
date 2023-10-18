@@ -1,7 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Son = ({son}) => {
-    const {brandName, name, image, _id, details, price, rating, type} = son
+    const {brandName, name, image, _id, details, price, rating, type} = son;
+    const handelDetails = (_id) => {
+      console.log(_id);
+    };
     return (
         <div className="card bg-base-50 shadow-xl transform hover:scale-105 transition duration-500 ease-out">
         <figure>
@@ -21,8 +25,17 @@ const Son = ({son}) => {
           <h1><span className=" font-bold">Price:</span> {price} </h1>
           <h1><span className=" font-bold">Rating :</span> {rating} out of 5</h1>
           <div className="card-actions justify-end">
-            <button className="badge badge-outline">Details</button>
-            <button className="badge badge-outline">Update</button>
+          <Link to={`/details/${_id}`}>
+            <button
+              onClick={() => handelDetails(_id)}
+              className="badge badge-outline hover:bg-[#FFBD26] hover:text-white transform hover:scale-105 p-3 transition duration-500 ease-out"
+            >
+              Details
+            </button>
+          </Link>
+          <button className="badge badge-outline hover:bg-[#FFBD26] hover:text-white transform hover:scale-105 p-3 transition duration-500 ease-out">
+            Update
+          </button>
           </div>
         </div>
       </div>

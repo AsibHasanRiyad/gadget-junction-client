@@ -25,6 +25,7 @@ const Apples = () => {
   }, []);
   const apples = products.filter((product) => product.brandName === "Apple");
   console.log(apples);
+  
   return (
     <div className=" mb-10 mt-4">
       {/* slider */}

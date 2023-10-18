@@ -10,6 +10,10 @@ import Asus from "../../pages/Asus/Asus";
 import Huawei from "../../pages/Huawei/Huawei";
 import Sony from "../../pages/Sony/Sony";
 import Xiaomi from "../../pages/Xiaomi/Xiaomi";
+import Details from "../../pages/Details/Details";
+import Update from "../../pages/Update/Update";
+import Login from "../../pages/Login/Login";
+import Register from "../../pages/Register/Register";
 
 
 const MainRoute = createBrowserRouter([
@@ -24,6 +28,23 @@ const MainRoute = createBrowserRouter([
         {
             path:'/addproduct',
             element:<AddProduct></AddProduct>
+        },
+        {
+            path:'/update',
+            element:<Update></Update>
+        },
+        {
+            path:'/login',
+            element:<Login></Login>
+        },
+        {
+            path:'/register',
+            element:<Register></Register>
+        },
+        {
+            path:'/details/:id',
+            element:<Details></Details>,
+            loader:() => fetch('http://localhost:5007/products')
         },
         {
             path:'/Apple',

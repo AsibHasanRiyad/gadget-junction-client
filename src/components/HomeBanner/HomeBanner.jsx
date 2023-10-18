@@ -30,7 +30,7 @@ export default function HomeBanner() {
         className="mySwiper"
       >
         <SwiperSlide >
-            <div className=' '>
+            <div className=''>
             <img className=' rounded md:h-[70vh] xl:h-[80vh] w-screen'  src="https://i.ibb.co/WpWLppC/akhil-yerabati-Q2u-V5-Tkj-Nz8-unsplash.jpg" alt="" />
             </div>
         </SwiperSlide>

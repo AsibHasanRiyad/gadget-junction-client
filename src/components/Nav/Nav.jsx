@@ -1,14 +1,23 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Nav.css";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Nav = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handedLogOut = () => {
+    logOut()
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
+  };
   return (
     <div
-    style={{
-      position: 'relative',
-      zIndex: '3'
-    }}
-    className="navbar bg-gray-100 px-0 md:px-10 xl:px-20" >
+      style={{
+        position: "relative",
+        zIndex: "3",
+      }}
+      className="navbar bg-black text-white py-5 mb-4 px-0 md:px-10 xl:px-20 text-xl"
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -29,7 +38,7 @@ const Nav = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content  mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
               <NavLink
@@ -75,14 +84,14 @@ const Nav = () => {
         </div>
         <div>
           <img
-            className=" w-72"
-            src="https://i.ibb.co/KjX4TzP/gjLogo.png"
+            className=" w-80"
+            src="https://i.ibb.co/DwVKqkt/gadget-junction-low-resolution-logo-color-on-transparent-background.png"
             alt=""
           />
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="flex flex-row gap-6">
+        <ul className="flex flex-row gap-8">
           <li className="transform hover:scale-125 transition duration-500 ease-out ">
             <NavLink
               to="/"
@@ -162,30 +171,33 @@ const Nav = () => {
               </div>
             </div>
           </div>
-          <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img src="https://i.ibb.co/mtxxTpV/9439727.jpg" />
-              </div>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
-            </ul>
-          </div>
+          {user ? (
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img src={user.photoURL} />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 text-black rounded-box w-52"
+              >
+                <li>
+                  <a className="justify-between">{user.displayName}</a>
+                </li>
+                <li>
+                  <a className="justify-between">{user.email}</a>
+                </li>
+                <li>
+                  <button onClick={handedLogOut}>Log Out</button>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            <div>
+              <Link to={"/login"}>Login</Link>
+            </div>
+          )}
         </div>
       </div>
     </div>
