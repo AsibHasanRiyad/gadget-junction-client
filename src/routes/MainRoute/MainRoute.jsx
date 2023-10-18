@@ -14,12 +14,16 @@ import Details from "../../pages/Details/Details";
 import Update from "../../pages/Update/Update";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import ErrorPage from "../../pages/Errorpage/ErrorPage";
+import AboutUs from "../../pages/AboutUs/AboutUs";
 
 
 const MainRoute = createBrowserRouter([
     {
       path: "/",
       element:<MainPage></MainPage>,
+      errorElement:<ErrorPage></ErrorPage>,
       children:[
         {
             path:'/',
@@ -27,7 +31,11 @@ const MainRoute = createBrowserRouter([
         },
         {
             path:'/addproduct',
-            element:<AddProduct></AddProduct>
+            element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>
+        },
+        {
+            path:'/aboutus',
+            element:<AboutUs></AboutUs>
         },
         {
             path:'/update',
@@ -43,7 +51,7 @@ const MainRoute = createBrowserRouter([
         },
         {
             path:'/details/:id',
-            element:<Details></Details>,
+            element:<PrivateRoute><Details></Details></PrivateRoute>,
             loader:() => fetch('http://localhost:5007/products')
         },
         {

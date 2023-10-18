@@ -1,17 +1,12 @@
 
-import { useContext } from "react";
+
 import AllProducts from "../../components/AllProducts/AllProducts";
 import Brands from "../../components/Brands/Brands";
 import HomeBanner from "../../components/HomeBanner/HomeBanner";
-import { AuthContext } from "../../provider/AuthProvider";
+
 
 const Home = () => {
-    const {loading} = useContext(AuthContext)
-    if (loading) {
-      return <div className=" h-screen flex justify-center items-center">
-          <span className="loading loading-spinner loading-lg"></span>
-      </div>
-  }
+
     return (
         <div className="mx-4">
             <div className=" flex flex-col lg:flex-row flex-1 gap-2">

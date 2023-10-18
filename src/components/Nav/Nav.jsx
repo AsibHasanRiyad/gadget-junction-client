@@ -72,6 +72,16 @@ const Nav = () => {
             </li>
             <li>
               <NavLink
+                to="/aboutus"
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+              >
+                About Us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/contact"
                 className={({ isActive, isPending }) =>
                   isPending ? "pending" : isActive ? "active" : ""
@@ -82,12 +92,14 @@ const Nav = () => {
             </li>
           </ul>
         </div>
-        <div>
+        <div className=" cursor-pointer">
+          <Link to={'/'}>
           <img
             className=" w-80"
             src="https://i.ibb.co/DwVKqkt/gadget-junction-low-resolution-logo-color-on-transparent-background.png"
             alt=""
           />
+          </Link>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -120,6 +132,16 @@ const Nav = () => {
               }
             >
               Blog
+            </NavLink>
+          </li>
+          <li className="transform hover:scale-125 transition duration-500 ease-out">
+            <NavLink 
+              to="/aboutus"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+            >
+              About Us
             </NavLink>
           </li>
           <li className=" transform hover:scale-125 transition duration-500 ease-out ">
