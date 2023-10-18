@@ -1,9 +1,14 @@
 import { NavLink } from "react-router-dom";
-import './Nav.css'
+import "./Nav.css";
 
 const Nav = () => {
   return (
-    <div className="navbar bg-gray-100 px-0 md:px-10 xl:px-20">
+    <div
+    style={{
+      position: 'relative',
+      zIndex: '3'
+    }}
+    className="navbar bg-gray-100 px-0 md:px-10 xl:px-20" >
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -26,45 +31,45 @@ const Nav = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-           <li>
-           <NavLink
-              to="/"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
-            >
-              Home
-            </NavLink>
-           </li>
             <li>
-            <NavLink
-              to="/addproduct"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
-            >
-              Add Product
-            </NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-            <NavLink
-              to="/blog"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
-            >
-              Blog
-            </NavLink>
+              <NavLink
+                to="/addproduct"
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+              >
+                Add Product
+              </NavLink>
             </li>
             <li>
-            <NavLink
-              to="/contact"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
-            >
-              Contact
-            </NavLink>
+              <NavLink
+                to="/blog"
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+              >
+                Blog
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/contact"
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+              >
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -77,9 +82,9 @@ const Nav = () => {
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="flex flex-row gap-5">
-        <li className="hover:animate-pulse hover:text-[#FFBD26] " >
-           <NavLink
+        <ul className="flex flex-row gap-6">
+          <li className="transform hover:scale-125 transition duration-500 ease-out ">
+            <NavLink
               to="/"
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
@@ -87,8 +92,8 @@ const Nav = () => {
             >
               Home
             </NavLink>
-           </li>
-           <li className=" hover:animate-pulse hover:text-[#FFBD26] " >
+          </li>
+          <li className=" transform hover:scale-125 transition duration-500 ease-out ">
             <NavLink
               to="/addproduct"
               className={({ isActive, isPending }) =>
@@ -97,8 +102,8 @@ const Nav = () => {
             >
               Add Product
             </NavLink>
-            </li>
-            <li className=" hover:animate-pulse hover:text-[#FFBD26] " >
+          </li>
+          <li className=" transform hover:scale-125 transition duration-500 ease-out ">
             <NavLink
               to="/blog"
               className={({ isActive, isPending }) =>
@@ -107,8 +112,8 @@ const Nav = () => {
             >
               Blog
             </NavLink>
-            </li>
-            <li className=" hover:animate-pulse hover:text-[#FFBD26] " >
+          </li>
+          <li className=" transform hover:scale-125 transition duration-500 ease-out ">
             <NavLink
               to="/contact"
               className={({ isActive, isPending }) =>
@@ -117,7 +122,7 @@ const Nav = () => {
             >
               Contact
             </NavLink>
-            </li>
+          </li>
         </ul>
       </div>
       <div className="navbar-end">
