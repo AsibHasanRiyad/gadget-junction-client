@@ -1,0 +1,44 @@
+
+  [
+      {
+        "id": 1,
+        "name": "Apple",
+        "image": "https://i.ibb.co/M2dZGj3/Png-Item-591019.png"
+      },
+      {
+        "id": 2,
+        "name": "Samsung",
+        "image": "https://i.ibb.co/TKd21mH/samsung-logo-png-1304.png"
+      },
+      {
+        "id": 3,
+        "name": "Sony",
+        "image": "https://i.ibb.co/DQMXtzs/sony-logo-3075.png"
+      },
+      {
+        "id": 4,
+        "name": "Google",
+        "image": "https://i.ibb.co/wCgsbPP/google-logo-history-png-2593.png"
+      },
+      {
+        "id": 5,
+        "name": "Xiaomi",
+        "image": "https://i.ibb.co/gybL56M/xiaomi-33317.png"
+      },
+      {
+        "id": 6,
+        "name": "Asus",
+        "image": "https://i.ibb.co/x6dKhSv/logo-asus-png-7175.png"
+      },
+      {
+        "id": 7,
+        "name": "Huawei",
+        "image": "https://i.ibb.co/YbSgSb1/Png-Item-5093426.png"
+      },
+      {
+        "id": 8,
+        "name": "OnePlus",
+        "image": "https://i.ibb.co/1bJPyFT/One-Plus-logo-PNG-jd6kdw.png"
+      }
+    ]
+  

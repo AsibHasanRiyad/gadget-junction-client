@@ -1,9 +1,10 @@
 
+import Brands from "../../components/Brands/Brands";
 
 const Home = () => {
     return (
-        <div>
-            This is home
+        <div className="mx-4">
+            <Brands></Brands>
         </div>
     );
 };

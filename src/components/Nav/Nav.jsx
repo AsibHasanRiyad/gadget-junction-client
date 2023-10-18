@@ -1,3 +1,6 @@
+import { NavLink } from "react-router-dom";
+import './Nav.css'
+
 const Nav = () => {
   return (
     <div className="navbar bg-gray-100 px-0 md:px-10 xl:px-20">
@@ -23,38 +26,98 @@ const Nav = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
+           <li>
+           <NavLink
+              to="/"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+            >
+              Home
+            </NavLink>
+           </li>
             <li>
-              <a>Home</a>
+            <NavLink
+              to="/addproduct"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+            >
+              Add Product
+            </NavLink>
             </li>
             <li>
-              <a>Add Product</a>
+            <NavLink
+              to="/blog"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+            >
+              Blog
+            </NavLink>
             </li>
             <li>
-              <a>Blog</a>
-            </li>
-            <li>
-              <a>Contact</a>
+            <NavLink
+              to="/contact"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+            >
+              Contact
+            </NavLink>
             </li>
           </ul>
         </div>
         <div>
-            <img className=" w-72" src="https://i.ibb.co/KjX4TzP/gjLogo.png" alt="" />
+          <img
+            className=" w-72"
+            src="https://i.ibb.co/KjX4TzP/gjLogo.png"
+            alt=""
+          />
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Home</a>
-          </li>
-          <li>
-            <a>Add Product</a>
-          </li>
-          <li>
-            <a>Blog</a>
-          </li>
-          <li>
-            <a>Contact</a>
-          </li>
+        <ul className="flex flex-row gap-5">
+        <li className="hover:animate-pulse hover:text-[#FFBD26] " >
+           <NavLink
+              to="/"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+            >
+              Home
+            </NavLink>
+           </li>
+           <li className=" hover:animate-pulse hover:text-[#FFBD26] " >
+            <NavLink
+              to="/addproduct"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+            >
+              Add Product
+            </NavLink>
+            </li>
+            <li className=" hover:animate-pulse hover:text-[#FFBD26] " >
+            <NavLink
+              to="/blog"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+            >
+              Blog
+            </NavLink>
+            </li>
+            <li className=" hover:animate-pulse hover:text-[#FFBD26] " >
+            <NavLink
+              to="/contact"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+            >
+              Contact
+            </NavLink>
+            </li>
         </ul>
       </div>
       <div className="navbar-end">
