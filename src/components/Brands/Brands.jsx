@@ -12,7 +12,7 @@ const Brands = () => {
     return (
         <div>
             <h1 className=" text-center font-bold text-[#FFBD26] text-5xl py-10">Brands</h1>
-            <div className="grid gap-5 grid-cols-3 md:grid-cols-4 ">
+            <div className="grid gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
                 {
                     brands.map(brand => <Brand key={brand.id} brand={brand}></Brand> )
                 }

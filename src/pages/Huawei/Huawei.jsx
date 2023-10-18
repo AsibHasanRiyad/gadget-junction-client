@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import Apple from "./Apple";
+import React, { useEffect, useState } from "react";
+import Huaw from "./Huaw";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,7 +14,7 @@ import "../../components/HomeBanner/HomeBanner.css";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-const Apples = () => {
+const Huawei = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5007/products")
@@ -23,8 +23,7 @@ const Apples = () => {
         setProducts(data);
       });
   }, []);
-  const apples = products.filter((product) => product.brandName === "Apple");
-  console.log(apples);
+  const huawei = products.filter((product) => product.brandName === "Huawei");
   return (
     <div className=" mb-10 mt-4">
       {/* slider */}
@@ -66,24 +65,24 @@ const Apples = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-
-      {/* products */}
-      {apples.length === 0 ? (
-        <h1 className=" h-[100vh] flex justify-center items-center text-3xl font-semibold">
-          No Product is Available
-        </h1>
-      ) : (
-        <div>
+      <div>
+        {huawei.length === 0 ? (
+          <h1 className=" h-[100vh] flex justify-center items-center text-3xl font-semibold">
+            No Product is Available
+          </h1>
+        ) : (
+          <div>
             <h1 className=" text-4xl text-center text-[#FFBD26] mt-10">Available Products</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-10 px-4">
-            {apples.map((apple) => (
-              <Apple key={apple._id} apple={apple}></Apple>
-            ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-10 px-4">
+              {huawei.map((huaw) => (
+                <Huaw key={huaw._id} huaw={huaw}></Huaw>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
 
-export default Apples;
+export default Huawei;
