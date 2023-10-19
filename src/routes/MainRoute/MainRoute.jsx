@@ -18,6 +18,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import ErrorPage from "../../pages/Errorpage/ErrorPage";
 import AboutUs from "../../pages/AboutUs/AboutUs";
 import Cart from "../../pages/Cart/Cart";
+import Contact from "../../pages/Contact/Contact";
 
 
 const MainRoute = createBrowserRouter([
@@ -93,6 +94,10 @@ const MainRoute = createBrowserRouter([
             element:<PrivateRoute><Cart></Cart></PrivateRoute>,
             loader: () => fetch('http://localhost:5007/carts')
         },
+        {
+            path:'/contact',
+            element:<Contact></Contact>
+        }
       ]
     },
   ]);

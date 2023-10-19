@@ -73,16 +73,6 @@ const Nav = () => {
             </li>
             <li>
               <NavLink
-                to="/blog"
-                className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "active" : ""
-                }
-              >
-                Blog
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
                 to="/aboutus"
                 className={({ isActive, isPending }) =>
                   isPending ? "pending" : isActive ? "active" : ""
@@ -133,16 +123,6 @@ const Nav = () => {
               }
             >
               Add Product
-            </NavLink>
-          </li>
-          <li className=" transform hover:scale-125 transition duration-500 ease-out ">
-            <NavLink
-              to="/blog"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
-            >
-              Blog
             </NavLink>
           </li>
           <li className="transform hover:scale-125 transition duration-500 ease-out">
