@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const Details = () => {
   const loadedData = useLoaderData();
@@ -7,7 +8,31 @@ const Details = () => {
   console.log(id);
   const data = loadedData.find((detail) => detail._id === id);
   const { brandName, name, image, _id, details, price, rating, type } = data;
-  
+  console.log(data);
+
+  //send data to the server
+  const handelCart = () => {
+    fetch(`http://localhost:5007/carts`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Added",
+            text: "Shop More",
+            icon: "success",
+            confirmButtonText: "Okay",
+          });
+        }
+      });
+  };
+
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="container px-6 py-10 mx-auto">
@@ -17,7 +42,10 @@ const Details = () => {
           <h1 className="max-w-lg mt-4 text-2xl font-semibold leading-tight text-gray-800 dark:text-white">
             {name}
           </h1>
-          <button className=" flex justify-center items-center gap-2 outline rounded p-1 my-4 text-[#FFBD26] outline-[#FFBD26] hover:outline-none hover:bg-[#FFBD26] hover:text-white transform hover:scale-105 transition duration-600 ease-in ">
+          <button
+            onClick={handelCart}
+            className=" flex justify-center items-center gap-2 outline rounded p-1 my-4 text-[#FFBD26] outline-[#FFBD26] hover:outline-none hover:bg-[#FFBD26] hover:text-white transform hover:scale-105 transition duration-600 ease-in "
+          >
             Add To Cart <FaShoppingCart></FaShoppingCart>
           </button>
         </div>

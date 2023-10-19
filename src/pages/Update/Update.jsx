@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Update = () => {
+  const data = useLoaderData();
+  const { brandName, name, image, _id, details, price, rating, type } = data;
+
   const handelUpdate = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -12,33 +15,39 @@ const Update = () => {
     const price = form.price.value;
     const details = form.details.value;
     const rating = form.rating.value;
-    // console.log(image, name, brandName, type, price, details, rating);
-    const newProduct = { image, name, brandName, type, price, details, rating };
-    console.log(newProduct);
+    const updateDetails = {
+      image,
+      name,
+      brandName,
+      type,
+      price,
+      details,
+      rating,
+    };
 
-    //send data to server site
-    // fetch('http://localhost:5007/products',{
-    //     method:'POST',
-    //     headers:{
-    //         'content-type': 'application/json'
-    //     },
-    //     body: JSON.stringify(newProduct)
-    // })
-    // .then(res => res.json())
-    // .then(data =>{
-    //     console.log(data);
-    //     if (data.insertedId) {
-    //       Swal.fire({
-    //         title: "Added Successfully",
-    //         text: "Do you want to continue",
-    //         icon: "success",
-    //         confirmButtonText: "Okay",
-    //       });
-    //     }
-    // })
+    fetch(`http://localhost:5007/products/652f67ee4e88441c9ddee954`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updateDetails),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        // if (data.modifiedCount) {
+        //   Swal.fire({
+        //     title: "Added Successfully",
+        //     text: "Do you want to continue",
+        //     icon: "success",
+        //     confirmButtonText: "Okay",
+        //   });
+        // }
+      });
   };
   return (
     <div>
+      <h1>Update {data.name} </h1>
       <div className=" mt-12 mb-20 lg:mb-32 max-w-4xl mx-auto">
         <Link to={"/"}>
           <button className=" font-rancho flex text-3xl items-center pb-8 ">
@@ -72,6 +81,7 @@ const Update = () => {
                 required
                 type="text"
                 placeholder="Image URl"
+                defaultValue={image}
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
               />
             </div>
@@ -85,6 +95,7 @@ const Update = () => {
                   type="text"
                   required
                   placeholder="Product Name"
+                  defaultValue={name}
                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                 />
               </div>
@@ -95,7 +106,7 @@ const Update = () => {
                 <input
                   name="brandName"
                   type="text"
-                  
+                  defaultValue={brandName}
                   required
                   placeholder="Brand Name"
                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
@@ -109,6 +120,7 @@ const Update = () => {
                   name="type"
                   type="text"
                   required
+                  defaultValue={type}
                   placeholder="Product Type"
                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                 />
@@ -121,6 +133,7 @@ const Update = () => {
                   name="price"
                   type="number"
                   required
+                  defaultValue={price}
                   placeholder="Price"
                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                 />
@@ -133,6 +146,7 @@ const Update = () => {
                   name="details"
                   type="text"
                   required
+                  defaultValue={details}
                   placeholder="Details"
                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                 />
@@ -143,8 +157,9 @@ const Update = () => {
                 </label>
                 <input
                   name="rating"
-                  type="number"required
-
+                  type="number"
+                  required
+                  defaultValue={rating}
                   placeholder="rating"
                   className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                 />

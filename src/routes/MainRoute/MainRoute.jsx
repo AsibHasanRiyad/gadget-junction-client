@@ -17,6 +17,7 @@ import Register from "../../pages/Register/Register";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import ErrorPage from "../../pages/Errorpage/ErrorPage";
 import AboutUs from "../../pages/AboutUs/AboutUs";
+import Cart from "../../pages/Cart/Cart";
 
 
 const MainRoute = createBrowserRouter([
@@ -38,8 +39,9 @@ const MainRoute = createBrowserRouter([
             element:<AboutUs></AboutUs>
         },
         {
-            path:'/update',
-            element:<Update></Update>
+            path:'/update/:id',
+            element:<Update></Update>,
+            loader: ({params}) => fetch(`http://localhost:5007/products/${params.id}`)
         },
         {
             path:'/login',
@@ -85,6 +87,11 @@ const MainRoute = createBrowserRouter([
         {
             path:'/Xiaomi',
             element:<Xiaomi></Xiaomi>
+        },
+        {
+            path:'/cart',
+            element:<Cart></Cart>,
+            loader: () => fetch('http://localhost:5007/carts')
         },
       ]
     },
