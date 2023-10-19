@@ -9,7 +9,7 @@ const Product = ({ product }) => {
   //   console.log(_id);
   // };
   return (
-    <div className="card bg-base-100  transform hover:scale-[1.15] transition duration-500 ease-out">
+    <div data-aos="fade-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="card bg-base-100  transform hover:scale-[1.15] transition duration-500 ease-out">
       <figure>
         <img src={image} alt="Product" className=" w-48" />
       </figure>

@@ -27,6 +27,7 @@ const Nav = () => {
         position: "relative",
         zIndex: "3",
       }}
+      data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"
       className="navbar bg-black text-white py-4 px-0 md:px-10 xl:px-20 text-base"
     >
       <div className="navbar-start">

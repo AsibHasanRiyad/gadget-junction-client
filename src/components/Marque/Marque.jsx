@@ -3,7 +3,7 @@ import Marquee from 'react-fast-marquee';
 
 const Marque = () => {
     return (
-        <div className=" flex text-[#676666] pt-2.5 text-sm font-medium">
+        <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className=" flex text-[#676666] pt-2.5 text-sm font-medium">
       <Marquee pauseOnHover={true} className=" cursor-pointer">
       <p className=" mx-2">Apple files lawsuit against NSO Group, saying U.S. citizens were targets</p>
       <p className=" mx-2">Xiaomi revenue misses estimates as competition intensifies</p>

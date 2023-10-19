@@ -27,7 +27,7 @@ export default function HomeBanner() {
         }}
         // navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className='mySwiper'
       >
         <SwiperSlide >
             <div className=''>

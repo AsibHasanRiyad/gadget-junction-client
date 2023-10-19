@@ -10,7 +10,7 @@ const Brands = () => {
         .then(data => setBrands(data))
     },[])
     return (
-        <div>
+        <div >
             <h1 className=" text-center font-bold text-[#FFBD26] text-5xl py-10">Brands</h1>
             <div className="grid gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
                 {

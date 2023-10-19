@@ -2,6 +2,9 @@ import { Outlet } from "react-router-dom";
 import Nav from "../../components/Nav/Nav";
 import Footer from "../../components/Footer/Footer";
 import { ToastContainer } from "react-toastify";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 // import { AuthContext } from "../../provider/AuthProvider";
 // import { useContext } from "react";
 
@@ -12,8 +15,19 @@ const MainPage = () => {
   //         <span className="loading loading-spinner loading-lg"></span>
   //     </div>
   // }
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <div className="">
+       <div
+      data-aos="fade-down"
+      data-aos-offset="100"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="1000"
+      className=" bg-gray-100"
+    ></div>
       <ToastContainer
         position="top-right"
         autoClose={5000}
