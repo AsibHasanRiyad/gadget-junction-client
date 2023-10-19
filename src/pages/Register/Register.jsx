@@ -1,13 +1,15 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { updateProfile } from "firebase/auth";
 
 const Register = () => {
-    const {createUser}= useContext(AuthContext)
+    const {createUser,googleSignIn }= useContext(AuthContext)
     const [errorMessage, setErrorMessage] = useState("")
+    const navigate = useNavigate()
+    const location = useLocation()
   const handelSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -51,9 +53,22 @@ const Register = () => {
             progress: undefined,
             theme: "dark",
           });
+          navigate(location?.state ? location.state : '/')
+
     })
     .catch(error => setErrorMessage(error.message))
+
   };
+  
+      //google sign in
+      const handelGoogleSignIn = () =>{
+        googleSignIn()
+      .then(result => {
+        console.log(result.user)
+        navigate(location?.state ? location.state : '/')
+      })
+      .catch(error => console.log(error))
+      }
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
@@ -118,12 +133,12 @@ const Register = () => {
             <h1 className=" text-center text-red-500 py-2">{errorMessage}</h1>
 
             <p className="mt-4 text-center text-gray-600 dark:text-gray-400">
-              or sign in with
+              or 
             </p>
 
-            <a
-              href="#"
-              className="flex items-center justify-center px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
+            <button
+            onClick={handelGoogleSignIn}
+              className="flex items-center justify-center w-full px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
             >
               <svg className="w-6 h-6 mx-2" viewBox="0 0 40 40">
                 <path
@@ -145,7 +160,7 @@ const Register = () => {
               </svg>
 
               <span className="mx-2">Sign in with Google</span>
-            </a>
+            </button>
 
             <div className="mt-6 text-center ">
               <div

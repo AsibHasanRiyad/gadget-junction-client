@@ -25,7 +25,7 @@ const Update = () => {
       rating,
     };
 
-    fetch(`http://localhost:5007/products/652f67ee4e88441c9ddee954`, {
+    fetch(`http://localhost:5007/products/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -35,19 +35,18 @@ const Update = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        // if (data.modifiedCount) {
-        //   Swal.fire({
-        //     title: "Added Successfully",
-        //     text: "Do you want to continue",
-        //     icon: "success",
-        //     confirmButtonText: "Okay",
-        //   });
-        // }
+        if (data.modifiedCount) {
+          Swal.fire({
+            title: "Added Successfully",
+            text: "Do you want to continue",
+            icon: "success",
+            confirmButtonText: "Okay",
+          });
+        }
       });
   };
   return (
     <div>
-      <h1>Update {data.name} </h1>
       <div className=" mt-12 mb-20 lg:mb-32 max-w-4xl mx-auto">
         <Link to={"/"}>
           <button className=" font-rancho flex text-3xl items-center pb-8 ">

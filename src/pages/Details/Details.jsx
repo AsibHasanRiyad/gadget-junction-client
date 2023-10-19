@@ -1,13 +1,16 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import Swal from "sweetalert2";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Details = () => {
   const loadedData = useLoaderData();
   const { id } = useParams();
   console.log(id);
   const data = loadedData.find((detail) => detail._id === id);
-  const { brandName, name, image, _id, details, price, rating, type } = data;
+  const { brandName, name, image, details, price, rating, type } = data;
+  const cartData = {brandName, name, image, details, price, rating, type}
   console.log(data);
 
   //send data to the server
@@ -17,7 +20,7 @@ const Details = () => {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(cartData),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -32,7 +35,12 @@ const Details = () => {
         }
       });
   };
-
+  const {loading} = useContext(AuthContext)
+  if (loading) {
+    return <div className=" h-screen flex justify-center items-center">
+        <span className="loading loading-spinner loading-lg"></span>
+    </div>
+}
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="container px-6 py-10 mx-auto">

@@ -1,50 +1,60 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const {logIn} = useContext(AuthContext)
-    const [errorMessage, setErrorMessage] = useState("")
+  const { logIn,googleSignIn ,setLoading} = useContext(AuthContext);
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation()
   const handelLogin = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    setErrorMessage("")
-    if (password.length < 6) {
-        setErrorMessage("Password should be more than 6 characters");
-        return;
-      } else if (!/[A-Z]/.test(password)) {
-        setErrorMessage("Your Password should have at least one Uppercase");
-        return;
-      } else if (!/[!@#$%^&*]/.test(password)) {
-        setErrorMessage(
-          "Your Password should have at least one special character - !@#$%^&*"
-        );
-        return;
-      } else if (!/[1-9]/.test(password)) {
-        setErrorMessage("Your Password should have at least one number");
-        return;
-      }
-    logIn(email,password)
-    .then(result => {
-        console.log(result)
+    setErrorMessage("");
+    logIn(email, password)
+      .then((result) => {
+        console.log(result);
+        setLoading(false)
 
         toast.success("Login Successful", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
-    })
-    .catch(error => setErrorMessage(error.message))
-  };
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        setErrorMessage(error.message)
+        setLoading(false)
+      });
+
+      
+    };
+    //google sign in
+      const handelGoogleSignIn = () =>{
+        googleSignIn()
+        .then(result => {
+          console.log(result.user)
+          navigate(location?.state ? location.state : '/')
+        })
+      .catch(error => console.log(error))
+      }
+  const {loading} = useContext(AuthContext)
+  if (loading) {
+    return <div className=" h-screen flex justify-center items-center">
+        <span className="loading loading-spinner loading-lg"></span>
+    </div>
+}
+  
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
@@ -58,7 +68,7 @@ const Login = () => {
           </div>
 
           <h1 className="mt-3 text-2xl text-center font-semibold text-gray-800 capitalize sm:text-3xl dark:text-white">
-            Register
+            Sign In
           </h1>
           <div className="relative flex items-center mt-8">
             <input
@@ -90,12 +100,12 @@ const Login = () => {
             <h1 className=" text-center text-red-500 py-2">{errorMessage}</h1>
 
             <p className="mt-4 text-center text-gray-600 dark:text-gray-400">
-              or sign in with
+              or 
             </p>
 
-            <a
-              href="#"
-              className="flex items-center justify-center px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
+            <button
+            onClick={handelGoogleSignIn}
+              className="flex items-center justify-center w-full px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
             >
               <svg className="w-6 h-6 mx-2" viewBox="0 0 40 40">
                 <path
@@ -117,14 +127,15 @@ const Login = () => {
               </svg>
 
               <span className="mx-2">Sign in with Google</span>
-            </a>
+            </button>
 
             <div className="mt-6 text-center ">
               <div
                 href="#"
                 className="text-sm mb-4 text-blue-500 hover:underline dark:text-blue-400"
               >
-                Don not have an account yet? <Link to={"/register"}>Sign Up</Link>
+                Don not have an account yet?{" "}
+                <Link to={"/register"}>Sign Up</Link>
               </div>
             </div>
           </div>

@@ -3,12 +3,15 @@
 import AllProducts from "../../components/AllProducts/AllProducts";
 import Brands from "../../components/Brands/Brands";
 import HomeBanner from "../../components/HomeBanner/HomeBanner";
-
+import Marque from "../../components/Marque/Marque";
+import StoreLocation from "../../components/StoreLocation/StoreLocation";
 
 const Home = () => {
 
     return (
-        <div className="mx-4">
+        <div className="">
+            <Marque></Marque>
+            <div className=" mx-4 mt-4">
             <div className=" flex flex-col lg:flex-row flex-1 gap-2">
             <HomeBanner></HomeBanner>
             <div className=" w-30% space-y-2 hidden lg:block">
@@ -18,6 +21,8 @@ const Home = () => {
             </div>
             <Brands></Brands>
             <AllProducts></AllProducts>
+            <StoreLocation></StoreLocation>
+            </div>
         </div>
     );
 };
