@@ -4,6 +4,7 @@ import AllProducts from "../../components/AllProducts/AllProducts";
 import Brands from "../../components/Brands/Brands";
 import HomeBanner from "../../components/HomeBanner/HomeBanner";
 import Marque from "../../components/Marque/Marque";
+import Marquee2 from "../../components/Marquee2/Marquee2";
 import StoreLocation from "../../components/StoreLocation/StoreLocation";
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
             </div>
             <Brands></Brands>
             <AllProducts></AllProducts>
+            <Marquee2></Marquee2>
             <StoreLocation></StoreLocation>
             </div>
         </div>
