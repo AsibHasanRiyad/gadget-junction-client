@@ -1,6 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
-import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { toast } from "react-toastify";
@@ -9,9 +8,11 @@ const Details = () => {
   const loadedData = useLoaderData();
   const { id } = useParams();
   console.log(id);
+  const { user } = useContext(AuthContext);
+  const email = user.email
   const data = loadedData.find((detail) => detail._id === id);
   const { brandName, name, image, details, price, rating, type } = data;
-  const cartData = {brandName, name, image, details, price, rating, type}
+  const cartData = {brandName, name, image, details, price, rating, type, email }
   console.log(data);
 
   //send data to the server

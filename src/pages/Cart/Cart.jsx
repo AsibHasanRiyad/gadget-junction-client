@@ -7,7 +7,10 @@ import { AuthContext } from "../../provider/AuthProvider";
 const Cart = () => {
     const loadedData = useLoaderData();
     const [remaining, setRemaining] = useState(loadedData)
-    const {loading} = useContext(AuthContext)
+    const {loading, user} = useContext(AuthContext)
+    const cartEmail = user.email;
+    const userCart = remaining.filter(rem => rem.email === cartEmail)
+    console.log(cartEmail);
         if (loading) {
           return <div className=" h-screen flex justify-center items-center">
               <span className="loading loading-spinner loading-lg"></span>
@@ -23,7 +26,7 @@ const Cart = () => {
         <div>
             <h1 className=" text-4xl text-center text-[#FFBD26] pt-10">Selected Products</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mx-20">
-            {remaining.map((data) => (
+            {userCart.map((data) => (
               <EachCart 
               key={data._id} 
               remaining={remaining}

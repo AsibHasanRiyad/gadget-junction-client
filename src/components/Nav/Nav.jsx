@@ -18,6 +18,8 @@ const Nav = () => {
       .then((res) => res.json())
       .then((data) => setCart(data));
   }, []);
+  const userEmail = user?.email
+  const totalCart = cart.filter(car => car?.email === userEmail)
 
   // handelLogout
   const handedLogOut = () => {
@@ -204,7 +206,7 @@ const Nav = () => {
                     />
                   </svg>
                   <span className="badge badge-sm indicator-item">
-                    {cart.length}{" "}
+                    {totalCart.length}{" "}
                   </span>
                 </div>
               </label>
