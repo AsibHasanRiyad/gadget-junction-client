@@ -1,3 +1,5 @@
+import Marquee from "react-fast-marquee";
+
 const AboutUs = () => {
   return (
     <div>
@@ -11,7 +13,7 @@ const AboutUs = () => {
                 </h1>
 
                 <div className="mt-2">
-                  <span className="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+                  <span className="inline-block w-40 mx-10 h-1 bg-blue-500 rounded-full"></span>
                   <span className="inline-block w-3 h-1 ml-1 bg-blue-500 rounded-full"></span>
                   <span className="inline-block w-1 h-1 ml-1 bg-blue-500 rounded-full"></span>
                 </div>
@@ -111,39 +113,17 @@ const AboutUs = () => {
 
           <hr className="my-12 border-gray-200 dark:border-gray-700" />
 
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-            <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-              <img src="https://i.ibb.co/M2dZGj3/Png-Item-591019.png" alt="" />
-            </div>
+          <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className=" flex text-[#676666] dark:text-white pt-2.5 text-sm font-medium">
+      <Marquee pauseOnHover={false} className=" cursor-pointer">
+      <img className=" w-40 mx-10" src="https://i.ibb.co/M2dZGj3/Png-Item-591019.png" alt="" />
+      <img className=" w-40 mx-10" src="https://i.ibb.co/TKd21mH/samsung-logo-png-1304.png" alt="" />
+      <img className=" w-40 mx-10" src="https://i.ibb.co/1bJPyFT/One-Plus-logo-PNG-jd6kdw.png" alt="" />
+      <img className=" w-40 mx-10" src="https://i.ibb.co/wCgsbPP/google-logo-history-png-2593.png" alt="" />
+      <img className=" w-40 mx-10" src="https://i.ibb.co/PDQBwdX/kisspng-logo-huawei-customer-service-centre-huawei-huawei-logo-modem-kurulumu-5b671020b645d8-4900495.png" alt="" />
 
-            <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-              <img
-                src="https://i.ibb.co/TKd21mH/samsung-logo-png-1304.png"
-                alt=""
-              />
-            </div>
-
-            <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-              <img
-                src="https://i.ibb.co/1bJPyFT/One-Plus-logo-PNG-jd6kdw.png"
-                alt=""
-              />
-            </div>
-
-            <div className="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
-              <img
-                src="https://i.ibb.co/wCgsbPP/google-logo-history-png-2593.png"
-                alt=""
-              />
-            </div>
-
-            <div className="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1">
-              <img
-                src="https://i.ibb.co/PDQBwdX/kisspng-logo-huawei-customer-service-centre-huawei-huawei-logo-modem-kurulumu-5b671020b645d8-4900495.png"
-                alt=""
-              />
-            </div>
-          </div>
+   
+      </Marquee>
+    </div>
         </div>
       </section>
     </div>
