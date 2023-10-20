@@ -44,6 +44,33 @@ const AuthProvider = ({children}) => {
             unSubscribe()
         }
     },[auth])
+    // const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light')
+    // useEffect(() =>{
+    //     localStorage.setItem('theme', theme)
+    //     const localTheme = localStorage.getItem('theme');
+    //     document.querySelector("html").setAttribute('data-theme', localTheme)
+    // },[theme])
+    // const handelTheme = (e) =>{
+    //     if (e.target.checked) {
+    //         setTheme('dark')
+    //     }else{
+    //         setTheme('light')
+    //     }
+    // }
+
+    //toggle
+    const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light')
+    useEffect(() =>{
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark')
+        }
+        else{
+            document.documentElement.classList.remove('dark')
+        }
+    },[theme])
+    const handelTheme = () =>{
+        setTheme(theme === 'dark' ? 'light' : 'dark')
+    }
     const authInfo ={
         createUser,
         loading,
@@ -51,7 +78,8 @@ const AuthProvider = ({children}) => {
         logOut,
         logIn,
         googleSignIn,
-        setLoading
+        setLoading,
+        handelTheme
     }
     return (
         <AuthContext.Provider value={authInfo}>

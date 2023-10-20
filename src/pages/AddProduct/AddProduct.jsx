@@ -39,10 +39,10 @@ const AddProduct = () => {
     })
   };
   return (
-    <div>
-      <div className=" mt-12 mb-20 lg:mb-32 max-w-4xl mx-auto">
+    <div className=" dark:bg-gray-900 pt-10 pb-40">
+      <div className=" max-w-4xl mx-auto">
         <Link to={"/"}>
-          <button className=" font-rancho flex text-3xl items-center pb-8 ">
+          <button className=" font-rancho text-[#FFBD26] flex text-3xl items-center pb-8 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -52,14 +52,14 @@ const AddProduct = () => {
             >
               <path
                 d="M19.5 12H4.5M4.5 12L11.25 18.75M4.5 12L11.25 5.25"
-                stroke="#331A15"
+                stroke="#FFBD26"
               />
             </svg>
             Back to Home
           </button>
         </Link>
-        <section className="max-w-4xl mx-auto bg-gray-50 p-4 md:p-8  rounded-md shadow-md dark:bg-gray-800">
-          <h1 className=" text-center text-5xl font-semibold text-[#FFBD26] font-rancho  mb-6">
+        <section className="max-w-4xl mx-auto bg-gray-100 p-4 md:p-8  rounded-md shadow-md dark:bg-gray-800">
+          <h1 className=" text-center text-4xl font-semibold dark:text-white font-rancho  mb-6">
             Add New Product
           </h1>
 
@@ -73,7 +73,7 @@ const AddProduct = () => {
                 required
                 type="text"
                 placeholder="Image URl"
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 dark:outline  bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
               />
             </div>
             <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
@@ -86,7 +86,7 @@ const AddProduct = () => {
                   type="text"
                   required
                   placeholder="Product Name"
-                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 mt-2 text-gray-700 dark:outline  bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                 />
               </div>
               <div>
@@ -98,7 +98,7 @@ const AddProduct = () => {
                   type="text"
                   required
                   placeholder="Brand Name"
-                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 mt-2 text-gray-700 dark:outline  bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                 />
               </div>
               <div>
@@ -110,7 +110,7 @@ const AddProduct = () => {
                   type="text"
                   required
                   placeholder="Product Type"
-                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 mt-2 text-gray-700 dark:outline  bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                 />
               </div>
               <div>
@@ -122,7 +122,7 @@ const AddProduct = () => {
                   type="number"
                   required
                   placeholder="Price"
-                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 mt-2 text-gray-700 dark:outline  bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                 />
               </div>
               <div>
@@ -134,7 +134,7 @@ const AddProduct = () => {
                   type="text"
                   required
                   placeholder="Details"
-                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 mt-2 text-gray-700 dark:outline  bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                 />
               </div>
               <div>
@@ -146,7 +146,7 @@ const AddProduct = () => {
                   type="number"required
 
                   placeholder="rating"
-                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 mt-2 text-gray-700 dark:outline  bg-white   rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                 />
               </div>
             </div>
@@ -154,7 +154,7 @@ const AddProduct = () => {
             <div className=" w-full mt-6">
               <button
                 type="submit"
-                className=" w-full px-8 py-2.5 leading-5 bg-[#FFBD26] transition-colors duration-300 transform text-white text-xl border-2 rounded-md hover:bg-black font-rancho focus:outline-none focus:bg-gray-600"
+                className=" w-full px-8 py-2.5 leading-5 bg-gray-900 transition-colors duration-300 transform text-white text-xl  rounded-md hover:bg-gray-950 hover:text-white font-rancho focus:outline-none focus:bg-gray-600"
               >
                 Add Product
               </button>

@@ -6,11 +6,11 @@ import HomeBanner from "../../components/HomeBanner/HomeBanner";
 import Marque from "../../components/Marque/Marque";
 import Marquee2 from "../../components/Marquee2/Marquee2";
 import StoreLocation from "../../components/StoreLocation/StoreLocation";
-
 const Home = () => {
 
+
     return (
-        <div className=''>
+        <div className=' dark:bg-gray-900'>
             <Marque></Marque>
             <div className=" mx-4 mt-4">
             <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className=' flex flex-col lg:flex-row flex-1 gap-2 '>

@@ -9,9 +9,9 @@ const Product = ({ product }) => {
   //   console.log(_id);
   // };
   return (
-    <div data-aos="fade-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="card bg-base-100  transform hover:scale-[1.15] transition duration-500 ease-out">
+    <div  className=" cursor-pointer card bg-base-100 dark:bg-transparent dark:text-white  transform hover:scale-[1.15] transition duration-500 ease-out">
       <figure>
-        <img src={image} alt="Product" className=" w-48" />
+        <img src={image} alt="Product" className=" w-48 rounded-xl" />
       </figure>
 
       <div className="card-body">

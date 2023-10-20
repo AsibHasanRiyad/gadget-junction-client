@@ -37,7 +37,7 @@ const EachCart = ({ data, remaining, setRemaining }) => {
   }
   return (
     <div className="flex max-w-2xl overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 my-10">
-    <div className="w-1/3 bg-cover" 
+    <div className="w-1/3 bg-cover " 
     style={{
         backgroundImage: `url(${image})`,
         backgroundRepeat: 'no-repeat',
@@ -56,7 +56,7 @@ const EachCart = ({ data, remaining, setRemaining }) => {
             <h1 className="text-lg font-bold text-gray-700 dark:text-gray-200 md:text-xl">${price}</h1>
             <button
             onClick={() =>handelDelete(_id)}
-            className=" text-3xl text-black transform hover:scale-125 p-3 transition duration-500 ease-out">
+            className=" text-3xl text-black dark:text-white transform hover:scale-125 p-3 transition duration-500 ease-out">
                 <AiFillDelete></AiFillDelete>
             </button>
         </div>
