@@ -18,7 +18,7 @@ const AddProduct = () => {
     console.log(newProduct);
 
     //send data to server site
-    fetch('http://localhost:5007/products',{
+    fetch('https://gadget-junction-server-dnpta2jcy-asib-hasan-riyads-projects.vercel.app/products',{
         method:'POST',
         headers:{
             'content-type': 'application/json'

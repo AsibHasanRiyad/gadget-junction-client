@@ -15,7 +15,7 @@ const Details = () => {
 
   //send data to the server
   const handelCart = () => {
-    fetch(`http://localhost:5007/carts`, {
+    fetch(`https://gadget-junction-server-dnpta2jcy-asib-hasan-riyads-projects.vercel.app/carts`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -25,7 +25,7 @@ const Update = () => {
       rating,
     };
 
-    fetch(`http://localhost:5007/products/${_id}`, {
+    fetch(`https://gadget-junction-server-dnpta2jcy-asib-hasan-riyads-projects.vercel.app/products/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

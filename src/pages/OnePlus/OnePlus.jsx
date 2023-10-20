@@ -17,7 +17,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const OnePlus = () => {
     const [products, setProducts] = useState([]);
     useEffect(() =>{
-        fetch('http://localhost:5007/products')
+        fetch('https://gadget-junction-server-dnpta2jcy-asib-hasan-riyads-projects.vercel.app/products')
         .then(res => res.json())
         .then(data =>{
             setProducts(data)

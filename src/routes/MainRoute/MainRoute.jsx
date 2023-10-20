@@ -42,7 +42,7 @@ const MainRoute = createBrowserRouter([
         {
             path:'/update/:id',
             element:<Update></Update>,
-            loader: ({params}) => fetch(`http://localhost:5007/products/${params.id}`)
+            loader: ({params}) => fetch(`https://gadget-junction-server-dnpta2jcy-asib-hasan-riyads-projects.vercel.app/products/${params.id}`)
         },
         {
             path:'/login',
@@ -55,7 +55,7 @@ const MainRoute = createBrowserRouter([
         {
             path:'/details/:id',
             element:<PrivateRoute><Details></Details></PrivateRoute>,
-            loader:() => fetch('http://localhost:5007/products')
+            loader:() => fetch('https://gadget-junction-server-dnpta2jcy-asib-hasan-riyads-projects.vercel.app/products')
         },
         {
             path:'/Apple',
@@ -92,7 +92,7 @@ const MainRoute = createBrowserRouter([
         {
             path:'/cart',
             element:<PrivateRoute><Cart></Cart></PrivateRoute>,
-            loader: () => fetch('http://localhost:5007/carts')
+            loader: () => fetch('https://gadget-junction-server-dnpta2jcy-asib-hasan-riyads-projects.vercel.app/carts')
         },
         {
             path:'/contact',

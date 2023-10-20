@@ -9,7 +9,7 @@ const Nav = () => {
   //cart length 
   const [cart, setCart] = useState([]);
   useEffect(() =>{
-    fetch('http://localhost:5007/carts')
+    fetch('https://gadget-junction-server-dnpta2jcy-asib-hasan-riyads-projects.vercel.app/carts')
     .then(res => res.json())
     .then(data => setCart(data))
   },[])
