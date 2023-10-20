@@ -3,6 +3,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Details = () => {
   const loadedData = useLoaderData();
@@ -26,11 +27,15 @@ const Details = () => {
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
-          Swal.fire({
-            title: "Added",
-            text: "Shop More",
-            icon: "success",
-            confirmButtonText: "Okay",
+          toast.success("Product Added", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
           });
         }
       });
