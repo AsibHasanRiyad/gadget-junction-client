@@ -24,8 +24,8 @@ const Cart = () => {
         </h1>
       ) : (
         <div>
-            <h1 className=" text-2xl font-bold md:text-4xl text-center text-[#FFBD26] pt-10">Selected Products</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 mx-4 md:mx-20">
+            <h1 className=" text-2xl font-bold md:text-4xl text-center text-[#FFBD26] pt-10 pb-4 lg:pb-1">Selected Products</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-3 lg:gap-10 mx-4 lg:mx-20">
             {userCart.map((data) => (
               <EachCart 
               key={data._id} 
