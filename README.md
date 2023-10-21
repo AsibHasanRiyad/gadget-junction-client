@@ -1,6 +1,5 @@
-![screencapture-gadget-junction-web-app-2023-10-21-11_29_58](https://github.com/programming-hero-web-course-4/b8a10-brandshop-client-side-AsibHasanRiyad/assets/137589900/bb81bbbf-431d-4c90-896b-cbbcab1a1a7a)hello
 
-# Uplift
+# Gadget Junction
 
 
 ![Logo](https://i.ibb.co/sR9dBzj/gj-Favicon.png)
