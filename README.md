@@ -23,3 +23,11 @@ https://gadget-junction.web.app/
 - User can also login by using google .
 - Regex is added for more secure password
 - Backend is connected with the site so that from add product section user can add new product to the site, but this route is protected, user must sign in first to access this feature
+
+
+## Website Preview
+# On Light Mode
+https://i.ibb.co/6n01SDh/screencapture-gadget-junction-web-app-2023-10-21-11-29-31.png
+
+# On Dark Mode
+https://i.ibb.co/XWjrtT8/screencapture-gadget-junction-web-app-2023-10-21-11-29-58.png
