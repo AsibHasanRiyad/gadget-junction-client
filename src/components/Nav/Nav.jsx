@@ -166,7 +166,7 @@ const Nav = () => {
 
           {/* sun icon */}
           <svg
-            className="swap-on fill-current w-10 h-10"
+            className="swap-on fill-current w-8 h-8"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -175,7 +175,7 @@ const Nav = () => {
 
           {/* moon icon */}
           <svg
-            className="swap-off fill-current w-10 h-10"
+            className="swap-off fill-current w-8 h-8"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -186,14 +186,14 @@ const Nav = () => {
 
 
 
-        <div className=" flex justify-center items-center gap-5">
+        <div className=" flex justify-center ml-1 items-center gap-4">
           <Link to={"/cart"}>
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle">
                 <div className="indicator">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
+                    className="h-7 w-7"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -249,7 +249,7 @@ const Nav = () => {
               </ul>
             </div>
           ) : (
-            <div>
+            <div className=" text-2xl">
               <Link to={"/login"}>Login</Link>
             </div>
           )}
