@@ -18,13 +18,13 @@ const Cart = () => {
       }
     return (
         <div className=" dark:bg-gray-900 min-h-screen">
-            {remaining.length === 0 ? (
-        <h1 className=" h-[100vh] flex justify-center items-center text-3xl font-semibold">
+            {userCart.length === 0 ? (
+        <h1 className=" h-[100vh] flex justify-center dark:text-gray-300 items-center text-3xl font-semibold">
           No Product is Selected
         </h1>
       ) : (
         <div>
-            <h1 className=" text-2xl font-bold md:text-4xl text-center text-[#FFBD26] pt-10 pb-4 lg:pb-1">Selected Products</h1>
+            <h1 className=" text-2xl font-bold md:text-4xl text-center text-[#FFBD26] pt-10 pb-4 lg:pb-1">Selected Products:</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-3 lg:gap-10 mx-4 lg:mx-20">
             {userCart.map((data) => (
               <EachCart 
