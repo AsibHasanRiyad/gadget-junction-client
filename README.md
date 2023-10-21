@@ -1,4 +1,4 @@
-hello
+![screencapture-gadget-junction-web-app-2023-10-21-11_29_58](https://github.com/programming-hero-web-course-4/b8a10-brandshop-client-side-AsibHasanRiyad/assets/137589900/bb81bbbf-431d-4c90-896b-cbbcab1a1a7a)hello
 
 # Uplift
 
@@ -27,7 +27,8 @@ https://gadget-junction.web.app/
 
 ## Website Preview
 # On Light Mode
-https://i.ibb.co/6n01SDh/screencapture-gadget-junction-web-app-2023-10-21-11-29-31.png
+![screencapture-gadget-junction-web-app-2023-10-21-11_29_31](https://github.com/programming-hero-web-course-4/b8a10-brandshop-client-side-AsibHasanRiyad/assets/137589900/30a26d4e-dd5b-44ba-8f7b-2098ffd2687e)
+
 
 # On Dark Mode
-https://i.ibb.co/XWjrtT8/screencapture-gadget-junction-web-app-2023-10-21-11-29-58.png
+![screencapture-gadget-junction-web-app-2023-10-21-11_29_58](https://github.com/programming-hero-web-course-4/b8a10-brandshop-client-side-AsibHasanRiyad/assets/137589900/be4bde3b-cab2-4443-9252-2e79aa5e6cdd)
