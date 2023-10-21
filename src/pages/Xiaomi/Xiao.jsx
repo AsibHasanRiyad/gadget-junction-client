@@ -35,9 +35,11 @@ const Xiao = ({ xiao }) => {
               Details
             </button>
           </Link>
+          <Link to={`/update/${_id}`}>
           <button className="badge badge-outline hover:bg-[#FFBD26] hover:text-white transform hover:scale-105 p-3 transition duration-500 ease-out">
             Update
           </button>
+          </Link>
         </div>
       </div>
     </div>
