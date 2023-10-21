@@ -10,7 +10,7 @@ const Home = () => {
 
 
     return (
-        <div className=' dark:bg-gray-900'>
+        <div className=' dark:bg-gray-900 overflow-hidden'>
             <Marque></Marque>
             <div className=" mx-4 mt-4">
             <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className=' flex flex-col lg:flex-row flex-1 gap-2 '>
