@@ -41,7 +41,7 @@ const MainRoute = createBrowserRouter([
         },
         {
             path:'/update/:id',
-            element:<Update></Update>,
+            element:<PrivateRoute><Update></Update></PrivateRoute>,
             loader: ({params}) => fetch(`https://gadget-junction-server-dnpta2jcy-asib-hasan-riyads-projects.vercel.app/products/${params.id}`)
         },
         {
