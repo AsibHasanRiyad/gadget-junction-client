@@ -25,7 +25,7 @@ const Samsung = () => {
   }, []);
   const samsung = products.filter((product) => product.brandName === "Samsung");
   return (
-    <div className=" mb-4 mt-10">
+    <div className=" pb-10 pt-4 bg-base-100 dark:bg-gray-800 dark:text-white">
       <div className=" mx-4 lg:mx-20">
         <Swiper
           spaceBetween={30}
@@ -43,21 +43,21 @@ const Samsung = () => {
         >
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[400px] w-screen "
+              className=" rounded dark:rounded-none h-full  max-h-[400px] w-screen "
               src="https://i.ibb.co/XsJGrX3/Screenshot-2023-10-18-at-4-10-53-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[400px] w-screen"
+              className=" rounded dark:rounded-none h-full  max-h-[400px] w-screen"
               src="https://i.ibb.co/7kW5D26/Screenshot-2023-10-18-at-4-11-43-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[400px] w-screen"
+              className=" rounded dark:rounded-none h-full  max-h-[400px] w-screen"
               src="https://i.ibb.co/4RxRckj/Screenshot-2023-10-18-at-4-17-46-PM.png"
               alt=""
             />

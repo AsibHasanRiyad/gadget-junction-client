@@ -25,7 +25,7 @@ const Sony = () => {
   }, []);
   const sony = products.filter((product) => product.brandName === "Sony");
   return (
-    <div className=" mt-10 mb-4">
+    <div className=" pb-10 pt-4 bg-base-100 dark:bg-gray-800 dark:text-white">
       <div className=" mx-4 lg:mx-20">
         <Swiper
           spaceBetween={30}
@@ -43,21 +43,21 @@ const Sony = () => {
         >
           <SwiperSlide>
             <img
-              className=" rounded h-full max-h-[600px]   w-full "
+              className=" rounded dark:rounded-none h-full max-h-[600px]   w-full "
               src="https://i.ibb.co/dBzH835/james-feaver-cv3wn-Erx7w-unsplash.jpg"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[600px]  w-full"
+              className=" rounded dark:rounded-none h-full  max-h-[600px]  w-full"
               src="https://i.ibb.co/z8V1BC7/nikita-kostrykin-D3-Zdf-Bq-A4n-Q-unsplash.jpg"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[600px]  w-full"
+              className=" rounded dark:rounded-none h-full  max-h-[600px]  w-full"
               src="https://i.ibb.co/N2FPNtV/nikita-kostrykin-i1-Q9pphr-WUw-unsplash.jpg"
               alt=""
             />

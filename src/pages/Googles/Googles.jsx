@@ -26,7 +26,7 @@ const Googles = () => {
   const googles = products.filter((product) => product.brandName === "Google");
   console.log(googles);
   return (
-    <div className=" mt-4 mb-10">
+    <div className=" pb-10 pt-4 bg-base-100 dark:bg-gray-800 dark:text-white">
       {/* slider */}
       <div className=" mx-4 md:mx-20">
         <Swiper
@@ -45,21 +45,21 @@ const Googles = () => {
         >
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[500px] w-screen "
+              className=" rounded dark:rounded-none h-full  max-h-[500px] w-screen "
               src="https://i.ibb.co/hKggT8z/Screenshot-2023-10-18-at-4-45-57-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[500px] w-screen"
+              className=" rounded dark:rounded-none h-full  max-h-[500px] w-screen"
               src="https://i.ibb.co/DK6k45L/Screenshot-2023-10-18-at-4-44-58-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[500px] w-screen"
+              className=" rounded dark:rounded-none h-full  max-h-[500px] w-screen"
               src="https://i.ibb.co/m4fsDdr/Probably-the-best-one-for-the-bl-width-1600-format-webp-1.webp"
               alt=""
             />

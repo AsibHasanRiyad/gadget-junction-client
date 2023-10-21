@@ -8,9 +8,9 @@ const Google = ({ google }) => {
     console.log(_id);
   };
   return (
-    <div className="card bg-base-50 shadow-xl transform hover:scale-105 transition duration-500 ease-out">
+    <div className="card bg-base-50   transform hover:scale-105 transition duration-500 ease-out">
       <figure>
-        <img src={image} alt="Product" className=" w-48" />
+        <img src={image} alt="Product" className=" w-48 dark:rounded-md" />
       </figure>
 
       <div className="card-body">

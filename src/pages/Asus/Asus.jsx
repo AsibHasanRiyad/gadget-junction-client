@@ -25,7 +25,7 @@ const Asus = () => {
   }, []);
   const asus = products.filter((product) => product.brandName === "Asus");
   return (
-    <div className=" mt-4 mb-10">
+    <div className=" pt-4 pb-10 dark:bg-gray-800 dark:text-white">
       {/* slider */}
       <div className=" mx-4 lg:mx-20">
         <Swiper
@@ -44,21 +44,21 @@ const Asus = () => {
         >
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[500px] w-screen "
+              className=" rounded dark:rounded-none h-full  max-h-[500px] w-screen "
               src="https://i.ibb.co/hK2CwMF/Screenshot-2023-10-18-at-6-04-29-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[500px] w-screen"
+              className=" rounded dark:rounded-none h-full  max-h-[500px] w-screen"
               src="https://i.ibb.co/vLVmBVD/Screenshot-2023-10-18-at-6-04-07-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[500px] w-screen"
+              className=" rounded dark:rounded-none h-full  max-h-[500px] w-screen"
               src="https://i.ibb.co/t3g04k8/Screenshot-2023-10-18-at-6-03-39-PM.png"
               alt=""
             />

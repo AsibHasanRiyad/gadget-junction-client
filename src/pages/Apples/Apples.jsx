@@ -27,7 +27,7 @@ const Apples = () => {
   console.log(apples);
   
   return (
-    <div className=" mb-10 mt-4">
+    <div className=" pb-10 pt-4 bg-base-100 dark:bg-gray-800 dark:text-white ">
       {/* slider */}
       <div className=" mx-4 lg:mx-20 ">
         <Swiper
@@ -46,21 +46,21 @@ const Apples = () => {
         >
           <SwiperSlide>
             <img
-              className=" rounded h-full md:h-[80vh] w-full "
+              className=" rounded dark:rounded-none h-full md:h-[80vh] w-full "
               src="https://i.ibb.co/CB8RSkm/Screenshot-2023-10-18-at-3-55-52-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full md:h-[80vh] w-full"
+              className=" rounded dark:rounded-none  h-full md:h-[80vh] w-full"
               src="https://i.ibb.co/X57pRxr/Screenshot-2023-10-18-at-3-57-11-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full md:h-[80vh] w-full"
+              className=" rounded dark:rounded-none  h-full md:h-[80vh] w-full"
               src="https://i.ibb.co/QKpKxpJ/Screenshot-2023-10-18-at-4-27-11-PM.png"
               alt=""
             />
@@ -74,7 +74,7 @@ const Apples = () => {
           No Product is Available
         </h1>
       ) : (
-        <div>
+        <div className="">
             <h1 className=" text-4xl text-center text-[#FFBD26] mt-10">Available Products</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-10 px-4">
             {apples.map((apple) => (

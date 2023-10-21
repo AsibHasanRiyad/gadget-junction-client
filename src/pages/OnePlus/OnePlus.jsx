@@ -26,7 +26,7 @@ const OnePlus = () => {
     const onePlus = products.filter(product => product.brandName === 'One Plus')
     console.log(onePlus);
     return (
-        <div className=' mb-10 mt-4'>
+        <div className='pb-10 pt-4 bg-base-100 dark:bg-gray-800 dark:text-white'>
              {/* slider */}
       <div className=" mx-4 lg:mx-20">
       <Swiper
@@ -45,21 +45,21 @@ const OnePlus = () => {
       >
         <SwiperSlide>
           <img
-            className=" rounded  h-full max-h-[600px] w-full "
+            className=" rounded dark:rounded-none  h-full max-h-[600px] w-full "
             src="https://i.ibb.co/mzVTNGy/Screenshot-2023-10-18-at-4-38-42-PM.png"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=" rounded  h-full max-h-[600px]  w-full"
+            className=" rounded dark:rounded-none  h-full max-h-[600px]  w-full"
             src="https://i.ibb.co/RDBbs0Q/Screenshot-2023-10-18-at-4-39-04-PM.png"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className=" rounded  h-full max-h-[600px]   w-full"
+            className=" rounded dark:rounded-none  h-full max-h-[600px]   w-full"
             src="https://i.ibb.co/CB14T25/Screenshot-2023-10-18-at-4-40-36-PM.png"
             alt=""
           />

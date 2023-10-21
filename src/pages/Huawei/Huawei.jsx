@@ -25,7 +25,7 @@ const Huawei = () => {
   }, []);
   const huawei = products.filter((product) => product.brandName === "Huawei");
   return (
-    <div className=" mb-10 mt-4">
+    <div className=" pb-10 pt-4 bg-base-100 dark:bg-gray-800 dark:text-white">
       {/* slider */}
       <div className=" mx-4 ">
         <Swiper
@@ -44,21 +44,21 @@ const Huawei = () => {
         >
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[600px] w-screen "
+              className=" rounded dark:rounded-none h-full  max-h-[600px] w-screen "
               src="https://i.ibb.co/rM3ZmPp/Screenshot-2023-10-18-at-5-59-06-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[600px] w-screen"
+              className=" rounded dark:rounded-none h-full  max-h-[600px] w-screen"
               src="https://i.ibb.co/chf0HXM/Screenshot-2023-10-18-at-5-57-37-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[600px] w-screen"
+              className=" rounded dark:rounded-none h-full  max-h-[600px] w-screen"
               src="https://i.ibb.co/tbySt29/Screenshot-2023-10-18-at-5-58-51-PM.png"
               alt=""
             />

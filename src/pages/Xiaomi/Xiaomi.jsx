@@ -26,7 +26,7 @@ const Xiaomi = () => {
   const xiaomi = products.filter((product) => product.brandName === "Xiaomi");
   console.log(xiaomi);
   return (
-    <div className=" mt-4 mb-10">
+    <div className=" pb-10 pt-4 bg-base-100 dark:bg-gray-800 dark:text-white">
       {/* slider */}
       <div className=" mx-4 lg:mx-20">
         <Swiper
@@ -45,21 +45,21 @@ const Xiaomi = () => {
         >
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[500px] w-screen "
+              className=" rounded dark:rounded-none h-full  max-h-[500px] w-screen "
               src="https://i.ibb.co/8Xx0RbK/Screenshot-2023-10-18-at-5-52-35-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[500px] w-screen"
+              className=" rounded dark:rounded-none h-full  max-h-[500px] w-screen"
               src="https://i.ibb.co/LxwHBXs/Screenshot-2023-10-18-at-5-55-04-PM.png"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className=" rounded h-full  max-h-[500px] w-screen"
+              className=" rounded dark:rounded-none h-full  max-h-[500px] w-screen"
               src="https://i.ibb.co/T4t3312/Screenshot-2023-10-18-at-5-52-15-PM.png"
               alt=""
             />
