@@ -38,7 +38,7 @@ const Nav = () => {
       data-aos-offset="200"
       data-aos-easing="ease-in-sine"
       data-aos-duration="600"
-      className="navbar bg-gray-900 text-white py-4 px-0 md:px-10 xl:px-20 text-base"
+      className="navbar bg-gray-900 text-white  py-4 px-0 md:px-10 xl:px-20 text-base"
     >
       <div className="navbar-start">
         <div className="dropdown">
