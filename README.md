@@ -5,12 +5,12 @@
 ![Logo](https://i.ibb.co/sR9dBzj/gj-Favicon.png)
 
 
-## Live Link
+# Live Link
 
 https://gadget-junction.web.app/
 
 
-## Features
+# Features
 
 - Gadget Junction is an E-commerce based website
 - This Project has login logout functionality with firebase
@@ -24,10 +24,10 @@ https://gadget-junction.web.app/
 - Backend is connected with the site so that from add product section user can add new product to the site, but this route is protected, user must sign in first to access this feature
 
 
-## Website Preview
-# On Light Mode
+# Website Preview
+## On Light Mode
 ![screencapture-gadget-junction-web-app-2023-10-21-11_29_31](https://github.com/programming-hero-web-course-4/b8a10-brandshop-client-side-AsibHasanRiyad/assets/137589900/30a26d4e-dd5b-44ba-8f7b-2098ffd2687e)
 
 
-# On Dark Mode
+## On Dark Mode
 ![screencapture-gadget-junction-web-app-2023-10-21-11_29_58](https://github.com/programming-hero-web-course-4/b8a10-brandshop-client-side-AsibHasanRiyad/assets/137589900/be4bde3b-cab2-4443-9252-2e79aa5e6cdd)
