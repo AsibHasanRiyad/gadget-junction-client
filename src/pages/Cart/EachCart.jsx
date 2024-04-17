@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { AiFillDelete } from "react-icons/ai";
 import Swal from "sweetalert2";
+import {Link} from "react-router-dom"
 
 const EachCart = ({ data, remaining, setRemaining }) => {
   const { brandName, name, image, _id, price, rating } = data;
@@ -36,6 +37,7 @@ const EachCart = ({ data, remaining, setRemaining }) => {
       })
   }
   return (
+    <Link to={'/payment'}>
     <div className="flex max-w-2xl overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 my-4 lg:my-10">
     <div className="w-1/3 bg-cover " 
     style={{
@@ -62,6 +64,7 @@ const EachCart = ({ data, remaining, setRemaining }) => {
         </div>
     </div>
 </div>
+    </Link>
   );
 };
 

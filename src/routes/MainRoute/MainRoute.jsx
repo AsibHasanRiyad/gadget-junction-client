@@ -19,6 +19,7 @@ import ErrorPage from "../../pages/Errorpage/ErrorPage";
 import AboutUs from "../../pages/AboutUs/AboutUs";
 import Cart from "../../pages/Cart/Cart";
 import Contact from "../../pages/Contact/Contact";
+import { Payment } from "../../pages/Payment/Payment";
 
 
 const MainRoute = createBrowserRouter([
@@ -56,6 +57,10 @@ const MainRoute = createBrowserRouter([
             path:'/details/:id',
             element:<PrivateRoute><Details></Details></PrivateRoute>,
             loader:() => fetch('https://gadget-junction-server-dnpta2jcy-asib-hasan-riyads-projects.vercel.app/products')
+        },
+        {
+            path:'/payment',
+            element:<PrivateRoute><Payment></Payment></PrivateRoute>,
         },
         {
             path:'/Apple',

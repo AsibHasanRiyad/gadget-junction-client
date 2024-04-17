@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import {  Link, useLoaderData, useParams } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
@@ -121,6 +121,12 @@ const Details = () => {
               >
                 {details}
               </a>
+            </div>
+            <div>
+
+              <Link to={'/payment'} state={{check:'ok'}}>
+              <button className=" btn btn-success text-white mt-4 hover:bg-purple-500 hover:border-purple-500 transition-all duration-500">Buy Now</button>
+              </Link>
             </div>
           </div>
         </div>

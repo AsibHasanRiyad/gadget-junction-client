@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 
 const Huaw = ({huaw}) => {
-    const {brandName, name, image, _id, details, price, rating, type} = huaw;
+    const {brandName, name, image, _id, price, rating, type} = huaw;
     const handelDetails = (_id) => {
       console.log(_id);
     };
