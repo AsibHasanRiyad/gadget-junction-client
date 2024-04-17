@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { AiFillDelete } from "react-icons/ai";
 import Swal from "sweetalert2";
-import {Link} from "react-router-dom"
 
 const EachCart = ({ data, remaining, setRemaining }) => {
   const { brandName, name, image, _id, price, rating } = data;
@@ -37,8 +36,8 @@ const EachCart = ({ data, remaining, setRemaining }) => {
       })
   }
   return (
-    <Link to={'/payment'}>
-    <div className="flex max-w-2xl overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 my-4 lg:my-10">
+
+    <div className="flex max-w-2xl my-4 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:my-10">
     <div className="w-1/3 bg-cover " 
     style={{
         backgroundImage: `url(${image})`,
@@ -46,16 +45,16 @@ const EachCart = ({ data, remaining, setRemaining }) => {
         backgroundSize:'contain'
         }}></div>
 
-    <div className="w-2/3 pl-2 pt-2 lg:p-4">
-        <h1 className=" text-sm lg:text-xl font-bold text-gray-800 dark:text-white">{name}</h1>
+    <div className="w-2/3 pt-2 pl-2 lg:p-4">
+        <h1 className="text-sm font-bold text-gray-800 lg:text-xl dark:text-white">{name}</h1>
 
 
-        <p className="mt-2 text-xs lg:text-sm text-gray-600 dark:text-gray-400"> <span className=" font-bold">Brand Name:</span> {brandName}</p>
-        <p className="mt-2 text-xs hidden md:block lg:text-sm text-gray-600 dark:text-gray-400"> <span className=" font-bold">Ratings:</span> {rating} out of 5</p>
+        <p className="mt-2 text-xs text-gray-600 lg:text-sm dark:text-gray-400"> <span className="font-bold ">Brand Name:</span> {brandName}</p>
+        <p className="hidden mt-2 text-xs text-gray-600 md:block lg:text-sm dark:text-gray-400"> <span className="font-bold ">Ratings:</span> {rating} out of 5</p>
 
 
         <div className="flex justify-between mt-3 item-center">
-            <h1 className=" text-xs lg:text-lg font-bold text-gray-700 dark:text-gray-200 ">${price}</h1>
+            <h1 className="text-xs font-bold text-gray-700 lg:text-lg dark:text-gray-200">${price}</h1>
             <button
             onClick={() =>handelDelete(_id)}
             className=" text-sm  lg:text-3xl text-black dark:text-white transform hover:scale-125 p-1.5 transition duration-500 ease-out">
@@ -64,7 +63,6 @@ const EachCart = ({ data, remaining, setRemaining }) => {
         </div>
     </div>
 </div>
-    </Link>
   );
 };
 
