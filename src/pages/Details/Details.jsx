@@ -124,7 +124,7 @@ const Details = () => {
             </div>
             <div>
 
-              <Link to={'/payment'} state={{check:'ok'}}>
+              <Link to={'/payment'} state={{data: data}}>
               <button className=" btn btn-success text-white mt-4 hover:bg-purple-500 hover:border-purple-500 transition-all duration-500">Buy Now</button>
               </Link>
             </div>
