@@ -43,7 +43,7 @@ const Details = () => {
   };
   const {loading} = useContext(AuthContext)
   if (loading) {
-    return <div className=" h-screen flex justify-center items-center">
+    return <div className="flex items-center justify-center h-screen ">
         <span className="loading loading-spinner loading-lg"></span>
     </div>
 }
@@ -125,7 +125,7 @@ const Details = () => {
             <div>
 
               <Link to={'/payment'} state={{data: data}}>
-              <button className=" btn btn-success text-white mt-4 hover:bg-purple-500 hover:border-purple-500 transition-all duration-500">Buy Now</button>
+              <button className="mt-4 text-white transition-all duration-500  btn btn-success hover:bg-purple-500 hover:border-purple-500">Buy Now</button>
               </Link>
             </div>
           </div>
