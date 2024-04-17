@@ -54,7 +54,7 @@ const EachCart = ({ data, remaining, setRemaining }) => {
 
 
         <div className="flex justify-between mt-3 item-center">
-            <h1 className="text-xs font-bold text-gray-700 lg:text-lg dark:text-gray-200">${price}</h1>
+            <h1 className="text-xs font-bold text-gray-700 lg:text-lg dark:text-gray-200">$ {price}</h1>
             <button
             onClick={() =>handelDelete(_id)}
             className=" text-sm  lg:text-3xl text-black dark:text-white transform hover:scale-125 p-1.5 transition duration-500 ease-out">
