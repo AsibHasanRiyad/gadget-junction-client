@@ -3,18 +3,17 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
-
-const Asu = ({ asu }) => {
-  const { brandName, name, image, _id, price, rating, type } = asu;
-  const handelDetails = (_id) => {
-    console.log(_id);
-  };
-  const {user} = useContext(AuthContext)
-  const admin = "riadahmedcoc@gmail.com"
+export const ProductCard = ({data}) => {
+    const { brandName, name, image, _id, price, rating, type } = data;
+    const handelDetails = (_id) => {
+      console.log(_id);
+    };
+    const {user} = useContext(AuthContext)
+    const admin = "riadahmedcoc@gmail.com"
   return (
     <div className="transition duration-500 ease-out transform card bg-base-50 hover:scale-105">
       <figure>
-        <img src={image} alt="Product" className="w-48  dark:rounded-lg" />
+        <img src={image} alt="Product" className="w-48 dark:rounded-md" />
       </figure>
 
       <div className="card-body">
@@ -50,7 +49,5 @@ const Asu = ({ asu }) => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default Asu;
+  )
+}

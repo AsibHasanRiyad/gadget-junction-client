@@ -28,6 +28,9 @@ const Nav = () => {
       .catch((error) => console.log(error));
   };
 
+  // admin
+  const admin = 'riadahmedcoc@gmail.com'
+
   return (
     <div
       style={{
@@ -38,14 +41,14 @@ const Nav = () => {
       data-aos-offset="200"
       data-aos-easing="ease-in-sine"
       data-aos-duration="600"
-      className="navbar bg-gray-900 text-white  py-4 px-0 md:px-10 xl:px-20 text-base"
+      className="px-0 py-4 text-base text-white bg-gray-900 navbar md:px-10 xl:px-20"
     >
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="w-5 h-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -62,7 +65,7 @@ const Nav = () => {
             tabIndex={0}
             className="menu text-black menu-sm dropdown-content  mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-             <li className=" ">
+             <li className="">
             <NavLink
               to="/"
               className={({ isActive, isPending }) =>
@@ -72,16 +75,18 @@ const Nav = () => {
               Home
             </NavLink>
           </li>
-          <li className="  ">
-            <NavLink
-              to="/addproduct"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
-            >
-              Add Product
-            </NavLink>
-          </li>
+         {
+          user?.email === admin &&  <li className="">
+          <NavLink
+            to="/addproduct"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""
+            }
+          >
+            Add Product
+          </NavLink>
+        </li>
+         }
           <li className="">
             <NavLink
               to="/aboutus"
@@ -92,7 +97,7 @@ const Nav = () => {
               About Us
             </NavLink>
           </li>
-          <li className=" ">
+          <li className="">
             <NavLink
               to="/contact"
               className={({ isActive, isPending }) =>
@@ -104,7 +109,7 @@ const Nav = () => {
           </li>
           </ul>
         </div>
-        <div className=" cursor-pointer">
+        <div className="cursor-pointer ">
           <Link to={"/"}>
             <img
               className=" w-80"
@@ -114,9 +119,9 @@ const Nav = () => {
           </Link>
         </div>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="hidden navbar-center lg:flex">
         <ul className="flex flex-row gap-8">
-          <li className="transform hover:scale-125 transition duration-500 ease-out ">
+          <li className="transition duration-500 ease-out transform hover:scale-125 ">
             <NavLink
               to="/"
               className={({ isActive, isPending }) =>
@@ -126,7 +131,8 @@ const Nav = () => {
               Home
             </NavLink>
           </li>
-          <li className=" transform hover:scale-125 transition duration-500 ease-out ">
+          {
+            user?.email === admin && <li className="transition duration-500 ease-out transform hover:scale-125">
             <NavLink
               to="/addproduct"
               className={({ isActive, isPending }) =>
@@ -136,7 +142,8 @@ const Nav = () => {
               Add Product
             </NavLink>
           </li>
-          <li className="transform hover:scale-125 transition duration-500 ease-out">
+          }
+          <li className="transition duration-500 ease-out transform hover:scale-125">
             <NavLink
               to="/aboutus"
               className={({ isActive, isPending }) =>
@@ -146,7 +153,7 @@ const Nav = () => {
               About Us
             </NavLink>
           </li>
-          <li className=" transform hover:scale-125 transition duration-500 ease-out ">
+          <li className="transition duration-500 ease-out transform hover:scale-125">
             <NavLink
               to="/contact"
               className={({ isActive, isPending }) =>
@@ -166,7 +173,7 @@ const Nav = () => {
 
           {/* sun icon */}
           <svg
-            className="swap-on fill-current w-8 h-8"
+            className="w-8 h-8 fill-current swap-on"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -175,7 +182,7 @@ const Nav = () => {
 
           {/* moon icon */}
           <svg
-            className="swap-off fill-current w-8 h-8"
+            className="w-8 h-8 fill-current swap-off"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -186,7 +193,7 @@ const Nav = () => {
 
 
 
-        <div className=" flex justify-center ml-1 items-center gap-4">
+        <div className="flex items-center justify-center gap-4 ml-1 ">
           <Link to={"/cart"}>
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -217,7 +224,7 @@ const Nav = () => {
                 {/* <div className="card-body">
                 <div className="card-actions">
                   <Link to={'/cart'}>
-                  <button className=" text-black btn-block">
+                  <button className="text-black btn-block">
                     View cart
                   </button>
                   </Link>
@@ -249,7 +256,7 @@ const Nav = () => {
               </ul>
             </div>
           ) : (
-            <div className=" text-2xl">
+            <div className="text-2xl ">
               <Link to={"/login"}>Login</Link>
             </div>
           )}
