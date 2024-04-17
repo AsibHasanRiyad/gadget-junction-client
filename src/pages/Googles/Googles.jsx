@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Google from "./Google";
+// import Google from "./Google";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,6 +13,7 @@ import "../../components/HomeBanner/HomeBanner.css";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { ProductCard } from "../../components/Global/ProductCard";
 
 const Googles = () => {
   const [products, setProducts] = useState([]);
@@ -26,9 +27,9 @@ const Googles = () => {
   const googles = products.filter((product) => product.brandName === "Google");
   console.log(googles);
   return (
-    <div className=" pb-10 pt-4 bg-base-100 dark:bg-gray-800 dark:text-white">
+    <div className="pt-4 pb-10 bg-base-100 dark:bg-gray-800 dark:text-white">
       {/* slider */}
-      <div className=" mx-4 md:mx-20">
+      <div className="mx-4 md:mx-20">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -74,9 +75,10 @@ const Googles = () => {
         ) : (
           <div>
             <h1 className=" text-4xl text-center text-[#FFBD26] mt-10">Available Products</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-10 px-4">
+            <div className="grid grid-cols-1 gap-10 px-4 py-10 md:grid-cols-2 lg:grid-cols-4">
               {googles.map((google) => (
-                <Google key={google._id} google={google}></Google>
+                // <Google key={google._id} data={google}></Google>
+                <ProductCard key={google._id} data={google} />
               ))}
             </div>
           </div>
