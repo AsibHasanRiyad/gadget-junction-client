@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import {  Link, useLoaderData, useParams } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
@@ -43,7 +43,7 @@ const Details = () => {
   };
   const {loading} = useContext(AuthContext)
   if (loading) {
-    return <div className=" h-screen flex justify-center items-center">
+    return <div className="flex items-center justify-center h-screen ">
         <span className="loading loading-spinner loading-lg"></span>
     </div>
 }
@@ -121,6 +121,12 @@ const Details = () => {
               >
                 {details}
               </a>
+            </div>
+            <div>
+
+              <Link to={'/payment'} state={{data: data}}>
+              <button className="mt-4 text-white transition-all duration-500  btn btn-success hover:bg-purple-500 hover:border-purple-500">Buy Now</button>
+              </Link>
             </div>
           </div>
         </div>

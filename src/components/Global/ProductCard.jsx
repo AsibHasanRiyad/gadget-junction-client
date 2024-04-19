@@ -1,21 +1,19 @@
 /* eslint-disable react/prop-types */
 
-import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
-
-const Product = ({ product }) => {
-  // console.log(product);
-  const { brandName, name, image, _id, price, rating, type } = product;
-  const { user } = useContext(AuthContext);
-  const admin = "riadahmedcoc@gmail.com";
-  // const handelDetails = (_id) => {
-  //   console.log(_id);
-  // };
+export const ProductCard = ({data}) => {
+    const { brandName, name, image, _id, price, rating, type } = data;
+    const handelDetails = (_id) => {
+      console.log(_id);
+    };
+    const {user} = useContext(AuthContext)
+    const admin = "riadahmedcoc@gmail.com"
   return (
-    <div className=" cursor-pointer card bg-base-100 dark:bg-transparent dark:text-white  transform hover:scale-[1.15] transition duration-500 ease-out">
+    <div className="transition duration-500 ease-out transform card bg-base-50 hover:scale-105">
       <figure>
-        <img src={image} alt="Product" className="w-48 rounded-xl" />
+        <img src={image} alt="Product" className="w-48 dark:rounded-md" />
       </figure>
 
       <div className="card-body">
@@ -35,23 +33,21 @@ const Product = ({ product }) => {
         <div className="justify-end card-actions">
           <Link to={`/details/${_id}`}>
             <button
-              // onClick={() => handelDetails(_id)}
+              onClick={() => handelDetails(_id)}
               className="badge badge-outline hover:bg-[#FFBD26] hover:text-white transform hover:scale-105 p-3 transition duration-500 ease-out"
             >
               Details
             </button>
           </Link>
-          {user?.email === admin && (
-            <Link to={`/update/${_id}`}>
-              <button className="badge badge-outline hover:bg-[#FFBD26] hover:text-white transform hover:scale-105 p-3 transition duration-500 ease-out">
-                Update
-              </button>
+          {
+            user?.email === admin && <Link to={`/update/${_id}`}>
+            <button className="badge badge-outline hover:bg-[#FFBD26] hover:text-white transform hover:scale-105 p-3 transition duration-500 ease-out">
+              Update
+            </button>
             </Link>
-          )}
+          }
         </div>
       </div>
     </div>
-  );
-};
-
-export default Product;
+  )
+}

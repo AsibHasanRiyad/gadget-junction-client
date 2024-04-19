@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Asu from "./Asu";
+import  { useEffect, useState } from "react";
+// import Asu from "./Asu";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,6 +13,7 @@ import "../../components/HomeBanner/HomeBanner.css";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { ProductCard } from "../../components/Global/ProductCard";
 
 const Asus = () => {
   const [products, setProducts] = useState([]);
@@ -25,9 +26,9 @@ const Asus = () => {
   }, []);
   const asus = products.filter((product) => product.brandName === "Asus");
   return (
-    <div className=" pt-4 pb-10 dark:bg-gray-800 dark:text-white">
+    <div className="pt-4 pb-10 dark:bg-gray-800 dark:text-white">
       {/* slider */}
-      <div className=" mx-4 lg:mx-20">
+      <div className="mx-4 lg:mx-20">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -73,9 +74,9 @@ const Asus = () => {
         ) : (
           <div>
             <h1 className=" text-4xl text-center text-[#FFBD26] mt-10">Available Products</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-10 px-4">
+            <div className="grid grid-cols-1 gap-10 px-4 py-10 md:grid-cols-2 lg:grid-cols-4">
               {asus.map((asu) => (
-                <Asu key={asu._id} asu={asu}></Asu>
+                <ProductCard key={asu._id} data={asu}></ProductCard>
               ))}
             </div>
           </div>

@@ -5,12 +5,20 @@
 ![Logo](https://i.ibb.co/sR9dBzj/gj-Favicon.png)
 
 
-# Live Link
+## Live Link
 
 https://gadget-junction.web.app/
 
+## Description
+Gadget Junction is a user-centric e-commerce platform that delivers a
+seamless shopping experience. Users can effortlessly register, log in, and add
+items to their cart. The site boasts efficient search functionality, providing users
+with a quick and easy way to find desired products. Additionally, Gadget Junction
+offers a modern aesthetic with dark and light mode options, ensuring a visually
+comfortable experience. The platform is fully responsive, adapting seamlessly to
+various devices for optimal usability.
 
-# Features
+## Features
 
 - Gadget Junction is an E-commerce based website
 - This Project has login logout functionality with firebase
@@ -22,6 +30,15 @@ https://gadget-junction.web.app/
 - User can also login by using google .
 - Regex is added for more secure password
 - Backend is connected with the site so that from add product section user can add new product to the site, but this route is protected, user must sign in first to access this feature
+
+# Used Technology
+- Frontend: React.js
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- User Authentication: Firebase Authentication
+- Deployment: Firebase Hosting
+- Version Control: Git, GitHub
+- Others: Tailwind CSS, AOS Animation, React Helmet
 
 
 # Website Preview
