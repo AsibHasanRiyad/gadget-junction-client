@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 
 const Apple = ({ apple }) => {
-  const { brandName, name, image, _id, details, price, rating, type } = apple;
+  const { brandName, name, image, _id, price, rating, type } = apple;
   const handelDetails = (_id) => {
     console.log(_id);
   };

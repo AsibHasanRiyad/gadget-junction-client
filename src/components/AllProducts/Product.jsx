@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
   // console.log(product);
-  const { brandName, name, image, _id, details, price, rating, type } = product;
+  const { brandName, name, image, _id, price, rating, type } = product;
   // const handelDetails = (_id) => {
   //   console.log(_id);
   // };
