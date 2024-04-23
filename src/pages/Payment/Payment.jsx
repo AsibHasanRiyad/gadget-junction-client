@@ -84,7 +84,6 @@ export const Payment = () => {
         </div>
     </div>
 </div>
-{/* random  */}
     </div>
   )
 }
