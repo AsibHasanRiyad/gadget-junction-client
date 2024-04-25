@@ -13,7 +13,6 @@ export const ProductCard = ({ data }) => {
   return (
     <div className="transition duration-500 ease-out transform card bg-base-50 hover:scale-105">
       <figure>
-        {/*  */}
         <img src={image} alt="Product" className="w-48 dark:rounded-md" />
       </figure>
 
