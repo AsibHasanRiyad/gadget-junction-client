@@ -26,7 +26,6 @@ const MainPage = () => {
       <MessengerCustomerChat
         pageId="<272520735953054>"
         appId="<1580465442749663>"
-        htmlRef="<REF_STRING>"
       />
       {/* ----------------------------- */}
       <div
