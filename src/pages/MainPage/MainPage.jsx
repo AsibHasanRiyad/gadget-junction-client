@@ -11,7 +11,7 @@ import "aos/dist/aos.css";
 const MainPage = () => {
   //   const {loading} = useContext(AuthContext)
   //   if (loading) {
-  //     return <div className=" h-screen flex justify-center items-center">
+  //     return <div className="flex items-center justify-center h-screen ">
   //         <span className="loading loading-spinner loading-lg"></span>
   //     </div>
   // }
@@ -21,13 +21,13 @@ const MainPage = () => {
   }, []);
   return (
     <div className="">
-       <div
-      data-aos="fade-down"
-      data-aos-offset="100"
-      data-aos-easing="ease-in-sine"
-      data-aos-duration="1000"
-      className=" bg-gray-100"
-    ></div>
+      <div
+        data-aos="fade-down"
+        data-aos-offset="100"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="1000"
+        className="bg-gray-100 "
+      ></div>
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -43,8 +43,8 @@ const MainPage = () => {
       {/* Same as */}
       <ToastContainer />
       <Nav></Nav>
-      <div className=" min-h-screen">
-      <Outlet></Outlet>
+      <div className="min-h-screen ">
+        <Outlet></Outlet>
       </div>
       <Footer></Footer>
     </div>

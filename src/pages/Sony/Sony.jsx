@@ -26,8 +26,10 @@ const Sony = () => {
   }, []);
   const sony = products.filter((product) => product.brandName === "Sony");
   return (
-    <div className="pt-4 pb-10  bg-base-100 dark:bg-gray-800 dark:text-white">
-      <div className="mx-4  lg:mx-20">
+
+    <div className="pt-4 pb-10 bg-base-100 dark:bg-gray-800 dark:text-white">
+      <div className="mx-4 lg:mx-20">
+
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -65,7 +67,7 @@ const Sony = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-
+{/* Random comment */}
       <div>
         {sony.length === 0 ? (
           <h1 className=" h-[100vh] flex justify-center items-center text-3xl font-semibold">

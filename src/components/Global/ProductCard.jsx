@@ -3,13 +3,15 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
-export const ProductCard = ({ data }) => {
-  const { brandName, name, image, _id, price, rating, type } = data;
-  const handelDetails = (_id) => {
-    console.log(_id);
-  };
-  const { user } = useContext(AuthContext);
-  const admin = "riadahmedcoc@gmail.com";
+
+export const ProductCard = ({data}) => {
+    const { brandName, name, image, _id, price, rating, type } = data;
+    const handelDetails = (_id) => {
+      console.log(_id);
+    };
+    const {user} = useContext(AuthContext)
+    const admin = "riadahmedcoc@gmail.com"
+
   return (
     <div className="transition duration-500 ease-out transform card bg-base-50 hover:scale-105">
       <figure>
@@ -39,15 +41,16 @@ export const ProductCard = ({ data }) => {
               Details
             </button>
           </Link>
-          {user?.email === admin && (
-            <Link to={`/update/${_id}`}>
-              <button className="badge badge-outline hover:bg-[#FFBD26] hover:text-white transform hover:scale-105 p-3 transition duration-500 ease-out">
-                Update
-              </button>
+          {
+            user?.email === admin && <Link to={`/update/${_id}`}>
+            <button className="badge badge-outline hover:bg-[#FFBD26] hover:text-white transform hover:scale-105 p-3 transition duration-500 ease-out">
+              Update
+            </button>
             </Link>
-          )}
+          }
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
+

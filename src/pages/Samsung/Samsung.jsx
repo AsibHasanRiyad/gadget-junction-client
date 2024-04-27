@@ -69,7 +69,7 @@ const Samsung = () => {
       <div>
         {samsung.length === 0 ? (
           <h1 className=" h-[100vh] flex justify-center items-center text-3xl font-semibold">
-            No Product is Available
+            No Product is Available.
           </h1>
         ) : (
           <div>

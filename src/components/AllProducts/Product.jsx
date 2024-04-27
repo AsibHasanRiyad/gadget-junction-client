@@ -7,15 +7,21 @@ import { AuthContext } from "../../provider/AuthProvider";
 const Product = ({ product }) => {
   // console.log(product);
   const { brandName, name, image, _id, price, rating, type } = product;
-  const { user } = useContext(AuthContext);
-  const admin = "riadahmedcoc@gmail.com";
+
+  const {user} = useContext(AuthContext)
+  const admin = "riadahmedcoc@gmail.com"
+
   // const handelDetails = (_id) => {
   //   console.log(_id);
   // };
   return (
     <div className=" cursor-pointer card bg-base-100 dark:bg-transparent dark:text-white  transform hover:scale-[1.15] transition duration-500 ease-out">
       <figure>
+
+        <img src={image} alt="Product" className="w-48  rounded-xl" />
+
         <img src={image} alt="Product" className="w-48 rounded-xl" />
+
       </figure>
 
       <div className="card-body">
@@ -41,13 +47,15 @@ const Product = ({ product }) => {
               Details
             </button>
           </Link>
-          {user?.email === admin && (
-            <Link to={`/update/${_id}`}>
-              <button className="badge badge-outline hover:bg-[#FFBD26] hover:text-white transform hover:scale-105 p-3 transition duration-500 ease-out">
-                Update
-              </button>
+
+          {
+            user?.email === admin && <Link to={`/update/${_id}`}>
+            <button className="badge badge-outline hover:bg-[#FFBD26] hover:text-white transform hover:scale-105 p-3 transition duration-500 ease-out">
+              Update
+            </button>
             </Link>
-          )}
+          }
+
         </div>
       </div>
     </div>
