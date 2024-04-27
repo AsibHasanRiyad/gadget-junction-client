@@ -3,6 +3,7 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+
 export const ProductCard = ({data}) => {
     const { brandName, name, image, _id, price, rating, type } = data;
     const handelDetails = (_id) => {
@@ -10,6 +11,7 @@ export const ProductCard = ({data}) => {
     };
     const {user} = useContext(AuthContext)
     const admin = "riadahmedcoc@gmail.com"
+
   return (
     <div className="transition duration-500 ease-out transform card bg-base-50 hover:scale-105">
       <figure>
@@ -51,3 +53,4 @@ export const ProductCard = ({data}) => {
     </div>
   )
 }
+
