@@ -3,7 +3,6 @@ import Nav from "../../components/Nav/Nav";
 import Footer from "../../components/Footer/Footer";
 import { ToastContainer } from "react-toastify";
 import { useEffect } from "react";
-import MessengerCustomerChat from "react-messenger-customer-chat";
 import Aos from "aos";
 import "aos/dist/aos.css";
 // import { AuthContext } from "../../provider/AuthProvider";
@@ -22,12 +21,6 @@ const MainPage = () => {
   }, []);
   return (
     <div className="">
-      {/* ---------------messenger------------------- */}
-      <MessengerCustomerChat
-        pageId="<272520735953054>"
-        appId="<1580465442749663>"
-      />
-      {/* ----------------------------- */}
       <div
         data-aos="fade-down"
         data-aos-offset="100"
