@@ -18,8 +18,6 @@ const Product = ({ product }) => {
     <div className=" cursor-pointer card bg-base-100 dark:bg-transparent dark:text-white  transform hover:scale-[1.15] transition duration-500 ease-out">
       <figure>
 
-        <img src={image} alt="Product" className="w-48  rounded-xl" />
-
         <img src={image} alt="Product" className="w-48 rounded-xl" />
 
       </figure>
